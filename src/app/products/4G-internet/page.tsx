@@ -15,6 +15,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Mail, PhoneCall, ChevronRight } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import Link from "next/link";
 
 const contacts = [
     { label: "Call us", value: "1150", icon: <PhoneCall color="white" size={18} /> },
@@ -173,13 +174,10 @@ const Internet4GPage = () => {
 
                             {/* buttons*/}
                             <div className="flex flex-wrap gap-3">
-                                <button className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]">
+                                <Link href="/pricing?cat=4g&sub=volume" className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]">
                                     View data plans
                                     <ChevronRight size={16} />
-                                </button>
-                                <button className="inline-flex items-center gap-2 border border-[#1d75b3]/30 text-[#1d75b3] hover:bg-[#1d75b3]/5 font-medium text-sm px-6 py-3 rounded-full transition-colors">
-                                    Check coverage map
-                                </button>
+                                </Link>
                             </div>
                         </div>
 

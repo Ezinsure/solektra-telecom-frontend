@@ -21,7 +21,7 @@ function GridSection({
             <p className="text-[10px] font-medium uppercase tracking-widest text-gray-400 mb-3">
                 {label}
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
                 {plans.map((plan) => (
                     <PlanCard key={plan.id} plan={plan} onSelect={onSelect} />
                 ))}
@@ -37,7 +37,7 @@ const PlanGrid = ({ section, onSelect }: PlanGridProps) => {
         (section.monthly?.length ?? 0) > 0;
 
     return (
-        <div className="flex-1 overflow-auto p-10 bg-[#f5f0e870] rounded-3xl ">
+        <div className="flex-1  overflow-auto p-10 bg-[#f5f0e870] rounded-3xl ">
             {/* Header */}
             <div className="mb-5">
                 <h2 className="text-[15px] font-medium text-gray-900">{section.title}</h2>

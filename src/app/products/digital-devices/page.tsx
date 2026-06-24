@@ -17,6 +17,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Mail, PhoneCall, ChevronRight } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
+import Link from "next/link";
 
 const contacts = [
     { label: "Call us", value: "1150", icon: <PhoneCall color="white" size={18} /> },
@@ -148,11 +149,19 @@ const DigitalDevice = () => {
                             </div>
 
                             <div className="flex flex-wrap gap-3 mt-16">
-                                <button className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]">
+                                <Link
+                                    href="/pricing?cat=devices&sub=smartphones"
+                                    className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]"
+                                >
                                     View available devices & prices
                                     <ChevronRight size={16} />
-                                </button>
-                                <button className="inline-flex items-center gap-2 border border-[#1d75b3]/30 text-[#1d75b3] hover:bg-[#1d75b3]/5 font-medium text-sm px-6 py-3 rounded-full transition-colors">
+                                </Link>
+                                <button
+                                    onClick={() => {
+                                        document.getElementById('howitworks')?.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                    className="inline-flex items-center gap-2 border border-[#1d75b3]/30 text-[#1d75b3] hover:bg-[#1d75b3]/5 font-medium text-sm px-6 py-3 rounded-full transition-colors"
+                                >
                                     Learn about PAYGO
                                 </button>
                             </div>
@@ -221,7 +230,7 @@ const DigitalDevice = () => {
             </section>
 
             {/* ── How it works ── */}
-            <section className="bg-white py-20 border-t border-[#e2e8f0]">
+            <section id="howitworks" className="bg-white py-20 border-t border-[#e2e8f0]">
                 <div className="container mx-auto max-w-7xl px-6">
                     <div className="text-center mb-14">
                         <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-4">

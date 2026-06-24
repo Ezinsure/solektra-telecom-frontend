@@ -6,11 +6,17 @@ import { plansData } from "./plans";
 import { CategoryKey, Plan } from "../types";
 import SidebarPage from "./Sidebar";
 import PlanGrid from "./PlanGrid";
+import { useSearchParams } from "next/navigation";
 
 const PricingPage = () => {
-  const [activeCat, setActiveCat] = useState<CategoryKey>("4g");
-  const [activeSub, setActiveSub] = useState("volume");
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+  const searchParams = useSearchParams();
+  const [activeCat, setActiveCat] = useState<CategoryKey>(
+    (searchParams.get("cat") as CategoryKey) ?? "4g"
+  );
+  const [activeSub, setActiveSub] = useState(
+    searchParams.get("sub") ?? "volume"
+  );
 
   const planKey = `${activeCat}-${activeSub}`;
   const currentSection = plansData[planKey] ?? {

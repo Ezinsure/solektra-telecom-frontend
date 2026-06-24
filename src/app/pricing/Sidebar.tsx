@@ -42,7 +42,7 @@ const SidebarPage = ({ activeCat, activeSub, onSelect }: SidebarProps) => {
 
   return (
     <nav
-      className="w-56 shrink-0  py-10 bg-[#f5f0e870] rounded-3xl px-3 overflow-auto "
+      className="w-56 shrink-0  py-10 bg-[#f5f0e870] rounded-3xl px-3 overflow-auto hidden lg:block "
       aria-label="Plan categories"
     >
       {categories.map((cat) => {
@@ -95,6 +95,7 @@ const SidebarPage = ({ activeCat, activeSub, onSelect }: SidebarProps) => {
         );
       })}
     </nav>
+
   );
 }
 export default SidebarPage;
