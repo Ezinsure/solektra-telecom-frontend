@@ -4,6 +4,7 @@ import "./globals.css";
 import FooterPage from "@/components/layout/footer/page";
 import { cn } from "@/lib/utils";
 import HeaderPage from "@/components/layout/header/page";
+import AOSInitializer from "@/components/AOSinitializer";
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <HeaderPage />
+        <AOSInitializer />
         <main className="flex-1">{children}</main>
         <FooterPage />
       </body>

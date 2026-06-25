@@ -49,12 +49,12 @@ const ContactPage = () => {
         <section className="bg-[#f5f0e870] min-h-screen pt-16">
             <div className="container mx-auto max-w-7xl px-6">
                 <div className="container mx-auto max-w-7xl px-6">
-                    <p className="text-xs uppercase tracking-widest text-[#1d75b3] font-semibold mb-4">get in touch</p>
-                    <h1 className="text-4xl md:text-5xl font-semibold text-[#1d75b3] leading-tight mb-16">
+                    <p data-aos="fade-right" data-aos-delay="300" className="text-xs uppercase tracking-widest text-[#1d75b3] font-semibold mb-4">get in touch</p>
+                    <h1 data-aos="fade-left" data-aos-delay="300" className="text-4xl md:text-5xl font-semibold text-[#1d75b3] leading-tight mb-16">
                         We are here for you, contact us <br /> at{" "}
                         <span className="text-[#e88824]">anytime</span>
                     </h1>
-                    <p className="text-[#0a0a0a]/50 text-base mx-auto my-8 leading-relaxed">
+                    <p data-aos="fade-up" data-aos-delay="300" className="text-[#0a0a0a]/50 text-base mx-auto my-8 leading-relaxed">
                         Have any questions about our services or just want to talk with us ?
                         Please reach out.
                     </p>
@@ -62,7 +62,8 @@ const ContactPage = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-6">
                     {contactCards.map((card, i) => (
-                        <div
+                        <div data-aos="zoom-in"
+                            data-aos-anchor-placement="top-bottom"
                             key={i}
                             className="bg-white rounded-xl p-8 flex flex-col gap-4"
                             style={{
@@ -111,7 +112,7 @@ const ContactPage = () => {
                 <div
                     className="bg-white rounded-xl px-8 py-5 text-center my-16"
                 >
-                    <p className="text-sm text-[#0a0a0a]/70 leading-relaxed">
+                    <p data-aos="zoom-in" data-aos-delay="300" className="text-sm text-[#0a0a0a]/70 leading-relaxed">
                         We&apos;re committed to providing prompt support. Our team is
                         available{" "}24/7, including weekendsto assist you with any inquiries.
                     </p>

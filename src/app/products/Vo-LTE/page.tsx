@@ -177,7 +177,11 @@ const VoLTEPage = () => {
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         {/* Carousel */}
                         <div className="w-full lg:w-1/2 shrink-0">
-                            <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-[0_0_60px_rgba(0,200,240,0.08)]">
+                            <div
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-[0_0_60px_rgba(0,200,240,0.08)]"
+                            >
                                 <Carousel
                                     opts={{ loop: true, align: "start" }}
                                     plugins={[autoplayPlugin]}
@@ -204,25 +208,41 @@ const VoLTEPage = () => {
                         </div>
 
                         <div className="w-full lg:w-1/2">
-                            <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-5">
+                            <span
+                                data-aos="fade-left"
+                                data-aos-delay="300"
+                                className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-5"
+                            >
                                 <span className="w-5 h-px bg-[#0a0a0a] " />
                                 Next-Gen Voice Technology
                             </span>
-                            <h1 className="text-3xl md:text-[2.5rem] font-semibold text-white leading-[1.15] mb-6">
+                            <h1
+                                data-aos="fade-right"
+                                data-aos-delay="300"
+                                className="text-3xl md:text-[2.5rem] font-semibold text-white leading-[1.15] mb-6"
+                            >
                                 Crystal Clear Voice with VoLTE — Stay Connected{" "}
                                 <span className="text-[#e88824]"> Like Never Before</span>
                             </h1>
-                            <p className="text-[15px] leading-relaxed mb-5">
+                            <p
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                className="text-[15px] leading-relaxed mb-5"
+                            >
                                 At SOLEKTRA Telecom, we&apos;re revolutionizing the way you
                                 communicate with{" "}
-                                <strong className="text-[#1d75b3] font-medium">
+                                <strong className="text-[#0072CE] font-medium">
                                     Voice over LTE (VoLTE)
                                 </strong>{" "}
                                 , a next-gen voice service that lets you make HD voice calls
                                 over our advanced 4G LTE network. Your calls are sharper,
                                 faster, and more reliable than ever before.
                             </p>
-                            <div className="border-l-2 border-[#1d75b3] pl-4 text-[#0a0a0a]/75 text-[14px] leading-relaxed">
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                className="border-l-2 border-[#0072CE] pl-4 text-[#0a0a0a]/75 text-[14px] leading-relaxed"
+                            >
                                 VoLTE routes voice calls over your 4G LTE data network instead
                                 of traditional voice channels — delivering higher call quality,
                                 faster setup, and the ability to use voice and data at the same
@@ -236,10 +256,12 @@ const VoLTEPage = () => {
                                     ["4G", "LTE powered"],
                                 ].map(([val, label]) => (
                                     <div
+                                        data-aos="fade-down"
+                                        data-aos-anchor-placement="top-bottom"
                                         key={val}
                                         className="flex items-center gap-2.5 bg-white/5 border border-white/10 rounded-full px-4 py-2"
                                     >
-                                        <span className="text-[#1d75b3] font-bold text-sm">
+                                        <span className="text-[#0072CE] font-bold text-sm">
                                             {val}
                                         </span>
                                         <span className="text-[#8faec8] text-xs">{label}</span>
@@ -247,20 +269,20 @@ const VoLTEPage = () => {
                                 ))}
                             </div>
                             <div className="flex flex-wrap gap-3 mt-8">
-                                <Link
+                                <Link data-aos="fade-right" data-aos-delay="300"
                                     href="/pricing?cat=volte&sub=packages"
                                     className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]"
                                 >
                                     Check compatibility
                                     <ChevronRight size={16} />
                                 </Link>
-                                <button
+                                <button data-aos="fade-left" data-aos-delay="300"
                                     onClick={() => {
                                         document
                                             .getElementById("whypage")
                                             ?.scrollIntoView({ behavior: "smooth" });
                                     }}
-                                    className="inline-flex items-center gap-2 border border-[#1d75b3]/30 text-[#1d75b3] hover:bg-[#1d75b3]/5 font-medium text-sm px-6 py-3 rounded-full transition-colors"
+                                    className="inline-flex items-center gap-2 border border-[#0072CE]/30 text-[#0072CE] hover:bg-[#0072CE]/5 font-medium text-sm px-6 py-3 rounded-full transition-colors"
                                 >
                                     Learn more
                                 </button>
@@ -272,7 +294,7 @@ const VoLTEPage = () => {
             <section className="bg-gradient-to-br from-[#0072CE] to-[#0072CE]/50 py-16">
                 <div className="container mx-auto max-w-7xl px-6">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-                        <div>
+                        <div data-aos="fade-right" data-aos-delay="300">
                             <h3 className="text-white! text-2xl font-semibold mb-2">
                                 Ready to experience VoLTE?
                             </h3>
@@ -281,7 +303,7 @@ const VoLTEPage = () => {
                                 team is ready to help you get connected.
                             </p>
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col sm:flex-row gap-4">
                             {contacts.map((c) => (
                                 <div
                                     key={c.label}
@@ -305,7 +327,7 @@ const VoLTEPage = () => {
 
             <section id="whypage" className=" py-5 border-t border-white/5">
                 <div className="container mx-auto max-w-7xl px-6">
-                    <div className="text-center mb-14">
+                    <div data-aos="fade-down" data-aos-delay="300" className="text-center mb-14">
                         <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-4">
                             <span className="w-5 h-px bg-[#0a0a0a]" />
                             Why VoLTE
@@ -323,7 +345,7 @@ const VoLTEPage = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         {benefits.map((b) => (
-                            <div
+                            <div data-aos="flip-left" data-aos-delay="300"
                                 key={b.title}
                                 className="group relative bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 hover:border-[#00C8F0]/30 hover:bg-white/[0.055] transition-all duration-300"
                             >
