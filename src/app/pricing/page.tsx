@@ -1,21 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import { PaymentModal } from "./PaymentMode";
 import { plansData } from "./plans";
 import { CategoryKey, Plan } from "../types";
 import SidebarPage from "./Sidebar";
 import PlanGrid from "./PlanGrid";
-import { useSearchParams } from "next/navigation";
 
-const PricingPage = () => {
+type Props = {
+  searchParams: Promise<{
+    cat?: string;
+    sub?: string;
+  }>;
+};
+
+const PricingPage = ({ searchParams }: Props) => {
+  const resolvedSearchParams = use(searchParams);
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
-  const searchParams = useSearchParams();
   const [activeCat, setActiveCat] = useState<CategoryKey>(
-    (searchParams.get("cat") as CategoryKey) ?? "4g"
+    (resolvedSearchParams.cat as CategoryKey) ?? "4g"
   );
+
   const [activeSub, setActiveSub] = useState(
-    searchParams.get("sub") ?? "volume"
+    resolvedSearchParams.sub ?? "volume"
   );
 
   const planKey = `${activeCat}-${activeSub}`;
@@ -52,9 +59,6 @@ const PricingPage = () => {
           plan={selectedPlan}
           onClose={() => setSelectedPlan(null)} />
       )}
-      <section>
-
-      </section>
     </main>
   );
 }
