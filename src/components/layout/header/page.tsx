@@ -53,9 +53,9 @@ const HeaderPage = () => {
   const [activeNav, setActiveNav] = useState<string | null>(null);
 
   return (
-    <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="w-full bg-white/40 border-b border-gray-100 sticky top-0 z-50">
       {/*  Main bar  */}
-      <div className="container mx-auto px-4 md:px-16 h-18 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-14 h-16 flex items-center justify-between">
         {/* Logo + Nav */}
         <Link href="/" className="flex items-center gap-10">
           <Image
@@ -81,20 +81,18 @@ const HeaderPage = () => {
             >
               <Link
                 href={link.href}
-                className={`flex items-center gap-1 px-4 py-2 text-base font-medium rounded-md transition-colors duration-500 ${
-                  activeNav === link.label
-                    ? "text-[#0072CE]"
-                    : "text-[#0a0a0a]/80 hover:text-[#0072CE]"
-                }`}
+                className={`flex items-center gap-1 px-4 py-2 text-base font-medium rounded-md transition-colors duration-500 ${activeNav === link.label
+                  ? "text-[#0072CE]"
+                  : "text-[#0a0a0a]/80 hover:text-[#0072CE]"
+                  }`}
               >
                 {link.label}
                 {link.hasDropdown && (
                   <HiChevronDown
-                    className={`text-sm transition-transform duration-200 ${
-                      dropdownOpen && activeNav === link.label
-                        ? "rotate-180"
-                        : ""
-                    }`}
+                    className={`text-sm transition-transform duration-200 ${dropdownOpen && activeNav === link.label
+                      ? "rotate-180"
+                      : ""
+                      }`}
                   />
                 )}
               </Link>

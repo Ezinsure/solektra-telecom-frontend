@@ -139,7 +139,7 @@ const FiberInternetPage = () => {
                 </motion.span>
               </div>
 
-              <motion.p
+              <motion.div
                 className="block"
                 variants={fadeUp}
                 initial="hidden"
@@ -160,7 +160,7 @@ const FiberInternetPage = () => {
                   — immune to interference, immune to distance degradation, and
                   ready for whatever tomorrow demands.
                 </div>
-              </motion.p>
+              </motion.div>
 
               {/* Speed stats */}
               <div className="grid grid-cols-3 gap-3">
@@ -190,7 +190,9 @@ const FiberInternetPage = () => {
       <section className="bg-gradient-to-br from-[#0072CE] to-[#0072CE]/50 py-16">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-            <div data-aos="fade-right" data-aos-delay="300">
+            <motion.div variants={fadeRight} initial="hidden"
+              animate="show"
+              transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}>
               <h3 className="text-white! text-2xl font-semibold mb-2">
                 Get fiber at your doorstep
               </h3>
@@ -199,8 +201,10 @@ const FiberInternetPage = () => {
                 walk you through packages, and schedule installation at your
                 convenience.
               </p>
-            </div>
-            <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col sm:flex-row gap-4">
+            </motion.div>
+            <motion.div variants={fadeLeft} initial="hidden"
+              animate="show"
+              transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} className="flex flex-col sm:flex-row gap-4">
               {contacts.map((c) => (
                 <div
                   key={c.label}
@@ -217,7 +221,7 @@ const FiberInternetPage = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

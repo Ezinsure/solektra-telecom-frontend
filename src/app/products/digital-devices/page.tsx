@@ -144,6 +144,10 @@ const fadeRight = {
     hidden: { opacity: 0, x: 24 },
     show: { opacity: 1, x: 0 },
 };
+const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    show: { opacity: 1, x: 0 },
+}
 
 const DigitalDevice = () => {
     const images = [BoyGen, OnCall, OnPhone, OnPhones, NextGen];
@@ -156,7 +160,6 @@ const DigitalDevice = () => {
             }),
         [],
     );
-
     return (
         <main className="bg-white text-[#0a0a0a]">
             <section className="bg-white py-20 relative overflow-hidden">
@@ -281,7 +284,9 @@ const DigitalDevice = () => {
             <section className="bg-gradient-to-br from-[#0072CE] to-[#0072CE]/50 py-16">
                 <div className="container mx-auto max-w-7xl px-6">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-                        <div data-aos="fade-right" data-aos-delay="300">
+                        <motion.div variants={fadeRight} initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}>
                             <h3 className="text-white! text-2xl font-semibold mb-2">
                                 Ready to get your device?
                             </h3>
@@ -290,8 +295,10 @@ const DigitalDevice = () => {
                                 set up your PAYGO plan. Our team is ready to help you get
                                 connected.
                             </p>
-                        </div>
-                        <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col sm:flex-row gap-4">
+                        </motion.div>
+                        <motion.div variants={fadeLeft} initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} className="flex flex-col sm:flex-row gap-4">
                             {contacts.map((c) => (
                                 <div
                                     key={c.label}
@@ -308,7 +315,7 @@ const DigitalDevice = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

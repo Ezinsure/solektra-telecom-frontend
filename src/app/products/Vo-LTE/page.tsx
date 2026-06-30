@@ -16,6 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { ChevronRight, Mail, PhoneCall } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const benefits = [
     {
@@ -157,6 +158,16 @@ const contacts = [
     },
 ];
 
+const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    show: { opacity: 1, x: 0 },
+};
+
+const fadeRight = {
+    hidden: { opacity: 0, x: 24 },
+    show: { opacity: 1, x: 0 },
+};
+
 const VoLTEPage = () => {
     const images = [Volteimage, Voltescreen, VolteVoice];
 
@@ -294,7 +305,9 @@ const VoLTEPage = () => {
             <section className="bg-gradient-to-br from-[#0072CE] to-[#0072CE]/50 py-16">
                 <div className="container mx-auto max-w-7xl px-6">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-                        <div data-aos="fade-right" data-aos-delay="300">
+                        <motion.div variants={fadeRight} initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}>
                             <h3 className="text-white! text-2xl font-semibold mb-2">
                                 Ready to experience VoLTE?
                             </h3>
@@ -302,8 +315,10 @@ const VoLTEPage = () => {
                                 Contact us today to explore available packs, check pricing. Our
                                 team is ready to help you get connected.
                             </p>
-                        </div>
-                        <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col sm:flex-row gap-4">
+                        </motion.div>
+                        <motion.div variants={fadeLeft} initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} className="flex flex-col sm:flex-row gap-4">
                             {contacts.map((c) => (
                                 <div
                                     key={c.label}
@@ -320,7 +335,7 @@ const VoLTEPage = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

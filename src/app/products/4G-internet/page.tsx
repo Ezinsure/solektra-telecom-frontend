@@ -16,6 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Mail, PhoneCall, ChevronRight } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const contacts = [
     {
@@ -167,6 +168,17 @@ const useCases = [
     { emoji: "📱", label: "Social Media" },
 ];
 
+// Reusable fade variant
+const fadeLeft = {
+    hidden: { opacity: 0, x: -24 },
+    show: { opacity: 1, x: 0 },
+};
+
+const fadeRight = {
+    hidden: { opacity: 0, x: 24 },
+    show: { opacity: 1, x: 0 },
+};
+
 const Internet4GPage = () => {
     const images = [InternetImg, VideoImg, SolektraImg];
 
@@ -299,7 +311,9 @@ const Internet4GPage = () => {
             <section className="bg-gradient-to-br from-[#0072CE] to-[#0072CE]/50 py-16">
                 <div className="container mx-auto max-w-7xl px-6">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-                        <div data-aos="fade-right">
+                        <motion.div variants={fadeRight} initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}>
                             <h3 className="text-white! text-2xl font-semibold mb-2">
                                 Get connected today
                             </h3>
@@ -307,8 +321,10 @@ const Internet4GPage = () => {
                                 Our team will help you pick the right data plan, check your
                                 area&apos;s 4G coverage, and get you online fast.
                             </p>
-                        </div>
-                        <div data-aos="fade-left" className="flex flex-col sm:flex-row gap-4">
+                        </motion.div>
+                        <motion.div initial="hidden"
+                            animate="show"
+                            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} variants={fadeLeft} className="flex flex-col sm:flex-row gap-4">
                             {contacts.map((c) => (
                                 <div
                                     key={c.label}
@@ -325,7 +341,7 @@ const Internet4GPage = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

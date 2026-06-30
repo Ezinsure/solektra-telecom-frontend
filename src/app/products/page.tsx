@@ -11,8 +11,7 @@ import Router1 from "../../../public/assets/images/router1.png";
 import Phone1 from "../../../public/assets/images/phone.png";
 import Fiber from "../../../public/assets/images/fiber.png";
 import PocketRouter from "../../../public/assets/images/pocketRoute.png";
-import VoLTE from "../../../public/assets/images/volte.jpeg";
-import Gaming from "../../../public/assets/images/gaaming.jpeg";
+import VoLTE from "../../../public/assets/images/gaaming.jpeg";
 import {
     Carousel,
     CarouselContent,
