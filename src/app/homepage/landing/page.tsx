@@ -173,9 +173,9 @@ const LandingPage = () => {
                                     <motion.span
                                         variants={fadeUp}
                                         transition={{ duration: 0.45, ease: "easeOut" }}
-                                        className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#7fc4ff] mb-4"
+                                        className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#0072CE]  mb-4"
                                     >
-                                        <span className="w-5 h-px bg-[#7fc4ff]" />
+                                        <span className="w-5 h-px bg-[#0072CE]" />
                                         {heroSlides[activeSlide].eyebrow}
                                     </motion.span>
 
