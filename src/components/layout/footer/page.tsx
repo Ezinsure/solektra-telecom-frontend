@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Logo from "../../../../public/assets/logos/logo.png";
-import { HiOutlineSlash } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi";
 import { SiWhatsapp, SiInstagram } from "react-icons/si";
 import { RiTwitterXFill } from "react-icons/ri";
@@ -99,9 +98,7 @@ const FooterPage = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-10 w-full">
               {/* Products */}
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-widest font-medium flex items-center gap-1 mb-8">
-                  <HiOutlineSlash />
-                  <HiOutlineSlash />
+                <p className="text-white text-xs uppercase tracking-widest font-medium flex items-center gap-1 mb-8">
                   Products
                 </p>
                 <ul className="flex flex-col gap-3">
@@ -120,9 +117,7 @@ const FooterPage = () => {
 
               {/* Support */}
               <div>
-                <p className="text-white/40 text-xs uppercase tracking-widest font-medium flex items-center gap-1 mb-8">
-                  <HiOutlineSlash />
-                  <HiOutlineSlash />
+                <p className="text-white text-xs uppercase tracking-widest font-medium flex items-center gap-1 mb-8">
                   Support
                 </p>
                 <ul className="flex flex-col gap-3">

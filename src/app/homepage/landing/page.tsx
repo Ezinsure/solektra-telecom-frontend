@@ -3,13 +3,14 @@
 import { useMemo, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Homeimg1 from '../../../../public/assets/images/img4g.png'
+import Homeimg1 from '../../../../public/assets/images/img5g.jpg'
 import Homeimg2 from '../../../../public/assets/images/solektra4g.png'
-import Homeimg3 from '../../../../public/assets/images/phones.png'
-import Router from '../../../../public/assets/images/router1nobg.png'
+import Homeimg3 from '../../../../public/assets/images/phones.avif'
+import Router from '../../../../public/assets/images/router1.png'
+import Routerdevice from '../../../../public/assets/images/routerdevice.webp'
 import Smartphone1 from '../../../../public/assets/images/smartpnobg.png'
 import VoLTE from '../../../../public/assets/images/voicecall.png'
-import FiberInternet from '../../../../public/assets/images/fiber.png'
+import FiberInternet from '../../../../public/assets/images/fiber.jpg'
 import HomeImage from '../../../../public/assets/images/curselhome/homeimg1.jpeg'
 import CarouselImg1 from '../../../../public/assets/images/curselhome/homeimg4.jpeg'
 import CarouselImg2 from '../../../../public/assets/images/curselhome/homeimg2.jpeg'
@@ -31,6 +32,14 @@ const heroSlides = [
         href: "/products/4G-internet",
     },
     {
+        image: Routerdevice,
+        eyebrow: "Routers",
+        title: "Stay connected,",
+        titleAccent: "anywhere you are",
+        desc: "Reliable routers built for homes and businesses — powered by our nationwide 4G network with zero setup hassle.",
+        href: "/products/digital-devices",
+    },
+    {
         image: Homeimg2,
         eyebrow: "SOLEKTRA Telecom",
         title: "One network,",
@@ -46,6 +55,7 @@ const heroSlides = [
         desc: "Own a quality smartphone through flexible PAYGO plans — no big upfront cost.",
         href: "/products/digital-devices",
     },
+
 ];
 
 
@@ -57,7 +67,7 @@ const services = [
         image: Router,
         theme: "light",
         href: "/products/4G-internet",
-        buyHref: "/pricing?cat=4g&sub=volume",
+        buyHref: "/packages?cat=4g&sub=volume",
     },
     {
         key: "fiber",
@@ -66,7 +76,7 @@ const services = [
         image: FiberInternet,
         theme: "dark",
         href: "/products/fiber-internet",
-        buyHref: "/pricing?cat=fiber&sub=home",
+        buyHref: "/packages?cat=fiber&sub=home",
     },
     {
         key: "devices",
@@ -75,7 +85,7 @@ const services = [
         image: Smartphone1,
         theme: "dark",
         href: "/products/digital-devices",
-        buyHref: "/pricing?cat=devices&sub=smartphones",
+        buyHref: "/packages?cat=devices&sub=smartphones",
     },
     {
         key: "volte",
@@ -84,7 +94,7 @@ const services = [
         image: VoLTE,
         theme: "light",
         href: "/products/Vo-LTE",
-        buyHref: "/pricing?cat=volte&sub=packages",
+        buyHref: "/packages?cat=volte&sub=packages",
     },
 ];
 
@@ -130,7 +140,7 @@ const LandingPage = () => {
 
     return (
         <main className="bg-white text-[#0a0a0a] overflow-x-hidden">
-            <div className="relative w-full h-[80vh] overflow-hidden">
+            <div className="relative w-full h-[93vh] overflow-hidden">
                 <Carousel
                     opts={{ loop: true, align: "start" }}
                     plugins={[autoplayPlugin]}
@@ -141,7 +151,7 @@ const LandingPage = () => {
                 >
                     <CarouselContent className="h-full">
                         {heroSlides.map((slide, index) => (
-                            <CarouselItem key={index} className="h-[80vh]">
+                            <CarouselItem key={index} className="h-[93vh]">
                                 <div className="relative w-full h-full">
                                     <Image
                                         src={slide.image}
@@ -152,7 +162,7 @@ const LandingPage = () => {
                                         sizes="100vw"
                                         className="object-cover object-center"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10" />
                                 </div>
                             </CarouselItem>
                         ))}
@@ -173,25 +183,25 @@ const LandingPage = () => {
                                     <motion.span
                                         variants={fadeUp}
                                         transition={{ duration: 0.45, ease: "easeOut" }}
-                                        className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#0072CE]  mb-4"
+                                        className="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.14em] uppercase text-[#0072CE]  mb-4"
                                     >
-                                        <span className="w-5 h-px bg-[#0072CE]" />
+                                        <span />
                                         {heroSlides[activeSlide].eyebrow}
                                     </motion.span>
 
                                     <motion.h1
                                         variants={fadeUp}
                                         transition={{ duration: 0.55, ease: "easeOut" }}
-                                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.12] mb-4"
+                                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white! leading-[1.12] mb-4"
                                     >
                                         {heroSlides[activeSlide].title}{" "}
-                                        <span className="text-[#e88824]">{heroSlides[activeSlide].titleAccent}</span>
+                                        <span className="text-[#0072CE]">{heroSlides[activeSlide].titleAccent}</span>
                                     </motion.h1>
 
                                     <motion.p
                                         variants={fadeUp}
                                         transition={{ duration: 0.5, ease: "easeOut" }}
-                                        className="text-white/80 text-sm sm:text-base leading-relaxed mb-7 max-w-md"
+                                        className="text-white text-sm sm:text-base leading-relaxed mb-7 max-w-md"
                                     >
                                         {heroSlides[activeSlide].desc}
                                     </motion.p>
@@ -199,7 +209,7 @@ const LandingPage = () => {
                                     <motion.div variants={fadeUp} transition={{ duration: 0.45, ease: "easeOut" }}>
                                         <Link
                                             href={heroSlides[activeSlide].href}
-                                            className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]"
+                                            className="inline-flex items-center gap-2 bg-[#0072CE] hover:bg-[#033f70] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]"
                                         >
                                             Explore
                                             <ChevronRight size={16} />
@@ -265,11 +275,11 @@ const LandingPage = () => {
                                     variants={fadeUp}
                                     transition={{ duration: 0.55, ease: "easeOut" }}
                                     className={`relative rounded-3xl overflow-hidden p-8 sm:p-10 flex flex-col items-center text-center group transition-transform duration-300 hover:-translate-y-1 ${isDark
-                                        ? "bg-[#0a0a0a] text-white"
-                                        : "bg-[#E6F1FB] text-[#0a0a0a]"
+                                        ? "bg-[#0072CE] text-white"
+                                        : "bg-[#E6F1FB] text-[#0072CE]"
                                         }`}
                                 >
-                                    <h3 className={`italic text-xl sm:text-2xl font-bold mb-2 ${isDark ? "text-white" : "text-[#0a0a0a]"}`}>
+                                    <h3 className={`italic text-xl sm:text-2xl font-bold mb-2 ${isDark ? "text-white!" : "text-[#0a0a0a]"}`}>
                                         {s.title}
                                     </h3>
                                     <p className={`text-sm leading-relaxed mb-5 max-w-xs ${isDark ? "text-white/70" : "text-[#0a0a0a]/70"}`}>

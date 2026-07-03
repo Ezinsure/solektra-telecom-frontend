@@ -9,7 +9,7 @@ import Smartphone2 from "../../../public/assets/images/samrtphone2.png";
 import Routerr from "../../../public/assets/images/router.png";
 import Router1 from "../../../public/assets/images/router1.png";
 import Phone1 from "../../../public/assets/images/phone.png";
-import Fiber from "../../../public/assets/images/fiber.png";
+import Fiber from "../../../public/assets/images/fiber.jpg";
 import PocketRouter from "../../../public/assets/images/pocketRoute.png";
 import VoLTE from "../../../public/assets/images/gaaming.jpeg";
 import {
@@ -33,12 +33,6 @@ const floatingTags = [
     { text: "Latest Smartphones", bottom: "30%", left: "2%", icon: <BsPhone />, delay: 1.0 },
     { text: "Upgrade Your Life", bottom: "30%", right: "4%", icon: "⚡", delay: 1.2 },
     { text: "Call & SMS", bottom: "10%", left: "8%", icon: <IoCallOutline />, delay: 1.4 },
-];
-
-const stats = [
-    { value: "50K+", label: "Active customers" },
-    { value: "99.9%", label: "Network uptime" },
-    { value: "300 Mbps", label: "Peak speed" },
 ];
 
 // Reusable fade variant
@@ -80,63 +74,63 @@ const ProductsPage = () => {
             image: Routerr,
             title: "4G Home Router",
             desc: "300 Mbps · 32 devices",
-            buyHref: "/pricing?cat=router&sub=home",
+            buyHref: "/packages?cat=router&sub=home",
             learnHref: "/products/4G-internet",
         },
         {
             image: Phone1,
             title: "Smartphone — Entry",
             desc: "4G ready · 4000 mAh",
-            buyHref: "/pricing?cat=devices&sub=smartphones",
+            buyHref: "/packages?cat=devices&sub=smartphones",
             learnHref: "/products/Vo-LTE",
         },
         {
             image: VoLTE,
             title: "VoLTE",
             desc: "4G ready · 4000 mAh",
-            buyHref: "/pricing?cat=volte&sub=packages",
+            buyHref: "/packages?cat=volte&sub=packages",
             learnHref: "/products/Vo-LTE",
         },
         {
             image: Router1,
             title: "Business Router",
             desc: "600 Mbps · dual-band",
-            buyHref: "/pricing?cat=router&sub=business",
+            buyHref: "/packages?cat=router&sub=business",
             learnHref: "/products/4G-internet",
         },
         {
             image: Fiber,
             title: "Fiber ONT Router",
             desc: "1 Gbps · symmetric",
-            buyHref: "/pricing?cat=fiber&sub=home",
+            buyHref: "/packages?cat=fiber&sub=home",
             learnHref: "/products/fiber-internet",
         },
         {
             image: PocketRouter,
             title: "Pocket Router",
             desc: "1 Gbps · symmetric",
-            buyHref: "/pricing?cat=fiber&sub=home",
+            buyHref: "/packages?cat=fiber&sub=home",
             learnHref: "/products/fiber-internet",
         },
         {
             image: Smartphone2,
             title: "Smartphone — Mid",
             desc: "4G+ · 6 GB RAM",
-            buyHref: "/pricing?cat=devices&sub=smartphones",
+            buyHref: "/packages?cat=devices&sub=smartphones",
             learnHref: "/products/digital-devices",
         },
         {
             image: Smartphone1,
             title: "Smartphone — Flagship",
             desc: "5G ready · 12 GB RAM",
-            buyHref: "/pricing?cat=devices&sub=smartphones",
+            buyHref: "/packages?cat=devices&sub=smartphones",
             learnHref: "/products/digital-devices",
         },
         {
             image: Routerman,
             title: "Business Router",
             desc: "600 Mbps · dual-band",
-            buyHref: "/pricing?cat=router&sub=pocket",
+            buyHref: "/packages?cat=router&sub=pocket",
             learnHref: "/products/4G-internet",
         },
     ];
@@ -202,32 +196,6 @@ const ProductsPage = () => {
                                 stay ahead in a connected world.
                             </motion.p>
 
-                            {/* Stats */}
-                            <motion.div
-                                className="flex flex-wrap gap-5 mb-8"
-                                initial="hidden"
-                                animate="show"
-                                variants={{
-                                    hidden: {},
-                                    show: { transition: { staggerChildren: 0.12, delayChildren: 0.7 } },
-                                }}
-                            >
-                                {stats.map((s) => (
-                                    <motion.div
-                                        key={s.label}
-                                        variants={fadeUp}
-                                        transition={{ duration: 0.45, ease: "easeOut" }}
-                                        className="flex items-center gap-2"
-                                    >
-                                        <div className="w-1 h-8 rounded-full bg-[#e88824]" />
-                                        <div>
-                                            <p className="text-sm font-bold text-[#0a0a0a] leading-none">{s.value}</p>
-                                            <p className="text-[11px] text-gray-400 mt-0.5">{s.label}</p>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </motion.div>
-
                             {/* CTAs */}
                             <motion.div
                                 className="flex flex-wrap gap-3"
@@ -237,7 +205,7 @@ const ProductsPage = () => {
                                 transition={{ duration: 0.5, delay: 1.0, ease: "easeOut" }}
                             >
                                 <Link
-                                    href="/pricing"
+                                    href="/packages"
                                     className="inline-flex items-center gap-2 bg-[#0072CE] hover:bg-[#0c3d6b] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(29,117,179,0.3)]"
                                 >
                                     View plans &amp; pricing
@@ -342,7 +310,7 @@ const ProductsPage = () => {
                             <h2 className="text-xl sm:text-2xl font-semibold text-[#0a0a0a]">Our latest products</h2>
                         </div>
                         <Link
-                            href="/pricing"
+                            href="/packages"
                             className="text-sm text-[#0072CE] font-medium flex items-center gap-1 hover:underline"
                         >
                             See all <ChevronRight size={14} />

@@ -281,7 +281,7 @@ const VoLTEPage = () => {
                             </div>
                             <div className="flex flex-wrap gap-3 mt-8">
                                 <Link data-aos="fade-right" data-aos-delay="300"
-                                    href="/pricing?cat=volte&sub=packages"
+                                    href="/packages?cat=volte&sub=packages"
                                     className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]"
                                 >
                                     Check compatibility

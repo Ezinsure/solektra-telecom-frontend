@@ -24,33 +24,18 @@ export const categories: Category[] = [
     subs: [{ key: "packages", label: "Solekrta Packages" }],
   },
   {
-    key: "router",
-    label: "Routers",
-    icon: "router",
-    subs: [
-      { key: "home", label: "Home routers" },
-      { key: "business", label: "Business routers" },
-      { key: "pocket", label: "Pocket Wi-Fi" },
-    ],
-  },
-  {
     key: "fiber",
     label: "Fiber",
     icon: "topology-star-3",
-    subs: [
-      { key: "home", label: "Home fiber" },
-      { key: "business", label: "Business fiber" },
-      { key: "enterprise", label: "Enterprise" },
-    ],
+    subs: [{ key: "dedicated", label: "Dedicated Fiber" }],
   },
   {
     key: "devices",
     label: "Devices",
     icon: "device-mobile",
     subs: [
+      { key: "home", label: "4G routers" },
       { key: "smartphones", label: "Smartphones" },
-      { key: "paygo", label: "PAYGO plans" },
-      { key: "accessories", label: "Accessories" },
     ],
   },
 ];
@@ -439,105 +424,8 @@ export const plansData: Record<string, PlanSection> = {
       },
     ],
   },
-
-  "router-home": {
-    title: "Routers — home",
-    desc: "Compact 4G routers for households. Plug in and share Wi-Fi instantly.",
-    daily: [
-      {
-        id: "rh-1",
-        vol: "Basic Router",
-        price: "25,000 RWF",
-        priceRaw: 25000,
-        validity: "One-time",
-        speed: "150 Mbps · 16 devices",
-      },
-    ],
-    weekly: [
-      {
-        id: "rh-2",
-        vol: "Standard Router",
-        price: "45,000 RWF",
-        priceRaw: 45000,
-        validity: "One-time",
-        speed: "300 Mbps · 32 devices",
-        popular: true,
-      },
-    ],
-    monthly: [
-      {
-        id: "rh-3",
-        vol: "Premium Router",
-        price: "75,000 RWF",
-        priceRaw: 75000,
-        validity: "One-time",
-        speed: "600 Mbps · 64 devices",
-      },
-    ],
-  },
-  "router-business": {
-    title: "Routers — business",
-    desc: "High-throughput routers with enterprise features and priority support.",
-    daily: [
-      {
-        id: "rb-1",
-        vol: "Business 300",
-        price: "80,000 RWF",
-        priceRaw: 80000,
-        validity: "One-time",
-        speed: "300 Mbps dual-band",
-      },
-    ],
-    weekly: [
-      {
-        id: "rb-2",
-        vol: "Business 600",
-        price: "120,000 RWF",
-        priceRaw: 120000,
-        validity: "One-time",
-        speed: "600 Mbps dual-band",
-        popular: true,
-      },
-    ],
-    monthly: [
-      {
-        id: "rb-3",
-        vol: "Business Pro",
-        price: "200,000 RWF",
-        priceRaw: 200000,
-        validity: "One-time",
-        speed: "1 Gbps tri-band",
-      },
-    ],
-  },
-  "router-pocket": {
-    title: "Routers — pocket Wi-Fi",
-    desc: "Take your network anywhere. Battery-powered portable hotspots.",
-    daily: [
-      {
-        id: "rp-1",
-        vol: "Pocket 150",
-        price: "18,000 RWF",
-        priceRaw: 18000,
-        validity: "One-time",
-        speed: "150 Mbps · 10 devices",
-      },
-    ],
-    weekly: [
-      {
-        id: "rp-2",
-        vol: "Pocket 300",
-        price: "30,000 RWF",
-        priceRaw: 30000,
-        validity: "One-time",
-        speed: "300 Mbps · 16 devices",
-        popular: true,
-      },
-    ],
-    monthly: [],
-  },
-  "fiber-home": {
-    title: "Fiber — home",
+  "fiber-dedicated": {
+    title: "Fiber — dedicated",
     desc: "Gigabit fiber delivered directly to your home.",
     daily: [
       {
@@ -583,61 +471,6 @@ export const plansData: Record<string, PlanSection> = {
       },
     ],
   },
-  "fiber-business": {
-    title: "Fiber — business",
-    desc: "Dedicated business fiber with SLA and 24/7 support.",
-    daily: [
-      {
-        id: "fb-1",
-        vol: "100 Mbps",
-        unit: "Biz",
-        price: "80,000 RWF/mo",
-        priceRaw: 80000,
-        validity: "Monthly",
-        speed: "Symmetric 100 Mbps",
-      },
-    ],
-    weekly: [
-      {
-        id: "fb-2",
-        vol: "500 Mbps",
-        unit: "Biz",
-        price: "150,000 RWF/mo",
-        priceRaw: 150000,
-        validity: "Monthly",
-        speed: "Symmetric 500 Mbps",
-        popular: true,
-      },
-    ],
-    monthly: [
-      {
-        id: "fb-3",
-        vol: "1 Gbps",
-        unit: "Biz",
-        price: "250,000 RWF/mo",
-        priceRaw: 250000,
-        validity: "Monthly",
-        speed: "Symmetric 1 Gbps",
-      },
-    ],
-  },
-  "fiber-enterprise": {
-    title: "Fiber — enterprise",
-    desc: "Custom capacity and dedicated lines for large organisations.",
-    daily: [],
-    weekly: [
-      {
-        id: "fe-1",
-        vol: "10 Gbps",
-        price: "Contact us",
-        priceRaw: 0,
-        validity: "Custom",
-        speed: "Symmetric 10 Gbps",
-        popular: true,
-      },
-    ],
-    monthly: [],
-  },
   "devices-smartphones": {
     title: "Devices — smartphones",
     desc: "Reliable smartphones for every need and budget.",
@@ -676,75 +509,39 @@ export const plansData: Record<string, PlanSection> = {
       },
     ],
   },
-  "devices-paygo": {
-    title: "Devices — PAYGO plans",
-    desc: "Own a device through flexible pay-as-you-go instalments.",
+
+  "devices-home": {
+    title: "Routers — home",
+    desc: "Compact 4G routers for households. Plug in and share Wi-Fi instantly.",
     daily: [
       {
-        id: "dp-1",
-        vol: "Basic",
-        unit: "PAYGO",
-        price: "3,000 RWF/wk",
-        priceRaw: 3000,
-        validity: "12 weeks",
-        speed: "Entry smartphone",
+        id: "rh-1",
+        vol: "Basic Router",
+        price: "25,000 RWF",
+        priceRaw: 25000,
+        validity: "One-time",
+        speed: "150 Mbps · 16 devices",
       },
     ],
     weekly: [
       {
-        id: "dp-2",
-        vol: "Standard",
-        unit: "PAYGO",
-        price: "5,000 RWF/wk",
-        priceRaw: 5000,
-        validity: "16 weeks",
-        speed: "Mid-range smartphone",
+        id: "rh-2",
+        vol: "Standard Router",
+        price: "45,000 RWF",
+        priceRaw: 45000,
+        validity: "One-time",
+        speed: "300 Mbps · 32 devices",
         popular: true,
       },
     ],
     monthly: [
       {
-        id: "dp-3",
-        vol: "Premium",
-        unit: "PAYGO",
-        price: "15,000 RWF/mo",
-        priceRaw: 15000,
-        validity: "12 months",
-        speed: "Flagship smartphone",
-      },
-    ],
-  },
-  "devices-accessories": {
-    title: "Devices — accessories",
-    desc: "SIM cards, cases, chargers, and add-ons.",
-    daily: [
-      {
-        id: "da-1",
-        vol: "SIM card",
-        price: "500 RWF",
-        priceRaw: 500,
+        id: "rh-3",
+        vol: "Premium Router",
+        price: "75,000 RWF",
+        priceRaw: 75000,
         validity: "One-time",
-        speed: "4G nano SIM",
-      },
-    ],
-    weekly: [
-      {
-        id: "da-2",
-        vol: "Fast charger",
-        price: "8,000 RWF",
-        priceRaw: 8000,
-        validity: "One-time",
-        speed: "65W USB-C",
-      },
-    ],
-    monthly: [
-      {
-        id: "da-3",
-        vol: "Phone case",
-        price: "5,000 RWF",
-        priceRaw: 5000,
-        validity: "One-time",
-        speed: "Shockproof · universal fit",
+        speed: "600 Mbps · 64 devices",
       },
     ],
   },

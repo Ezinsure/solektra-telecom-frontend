@@ -42,7 +42,7 @@ const products = [
 const navLinks = [
   { label: "Home", hasDropdown: false, href: "/" },
   { label: "Solution", hasDropdown: true, href: "/products" },
-  { label: "Pricing", hasDropdown: false, href: "/pricing" },
+  { label: "Packages", hasDropdown: false, href: "/packages" },
   { label: "About us", hasDropdown: false, href: "/about" },
   { label: "Contact", hasDropdown: false, href: "/contact" },
 ];

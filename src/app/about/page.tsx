@@ -9,8 +9,8 @@ import DeviceImg from '../../../public/assets/images/phone.png'
 
 const stats = [
     { value: "10K+", label: "Active Subscribers" },
-    { value: "95%", label: "Network Uptime" },
-    { value: "25+", label: "Districts Covered" },
+    { value: "99.9%", label: "Network Uptime" },
+    { value: "30", label: "Districts Covered" },
     { value: "4G+", label: "Network Standard" },
 ];
 
@@ -21,14 +21,6 @@ const values = [
     { icon: <MdOutlineHandshake size={22} />, label: "Partnership" },
     { icon: <BsGlobe size={22} />, label: "Digital Inclusion" },
     { icon: <MdOutlineSignalCellularAlt size={22} />, label: "Signal Quality" },
-];
-
-const coveredDistricts = [
-    { name: "Kigali City", districts: ["Gasabo", "Kicukiro", "Nyarugenge"] },
-    { name: "Northern Province", districts: ["Burera", "Gakenke", "Gicumbi", "Musanze", "Rulindo"] },
-    { name: "Southern Province", districts: ["Gisagara", "Huye", "Kamonyi", "Muhanga", "Nyamagabe", "Nyanza", "Nyaruguru", "Ruhango"] },
-    { name: "Eastern Province", districts: ["Bugesera", "Gatsibo", "Kayonza", "Kirehe", "Ngoma", "Nyagatare", "Rwamagana"] },
-    { name: "Western Province", districts: ["Karongi", "Ngororero", "Nyabihu", "Nyamasheke", "Rubavu", "Rusizi", "Rutsiro"] },
 ];
 
 const AboutPage = () => {
@@ -53,7 +45,7 @@ const AboutPage = () => {
             {/* ── PHOTO GRID + STATS ── */}
             <section className="py-4 px-6 bg-white">
                 <div className="container mx-auto max-w-7xl px-6">
-                    <div className="grid grid-cols-3 grid-rows-2 gap-3 h-[420px]">
+                    <div className="grid grid-cols-3 grid-rows-2 gap-3 h-[375px]">
 
                         {/* Large left image */}
                         <div data-aos="fade-right" data-aos-delay="300" className="row-span-2 rounded-2xl overflow-hidden bg-gray-200">
@@ -61,13 +53,14 @@ const AboutPage = () => {
                                 <Image
                                     src={WorkSpageImage}
                                     alt="wspaceImage"
+                                    className=" h-fu ll w-full"
                                 />
                             </div>
                         </div>
 
                         {/* Top center — orange stat card */}
                         <div data-aos="zoom-in" data-aos-delay="300" className="rounded-2xl bg-[#e88824] p-6 flex flex-col justify-end">
-                            <p className="text-white text-4xl font-bold">95%</p>
+                            <p className="text-white text-4xl font-bold">99.9%</p>
                             <p className="text-white/80 text-sm mt-1 font-medium">Network Uptime Guaranteed</p>
                         </div>
 
@@ -90,7 +83,7 @@ const AboutPage = () => {
                         </div>
                         {/* Bottom right — dark stat card */}
                         <div data-aos="fade-left" data-aos-delay="300" className="rounded-2xl bg-[#0a0a0a] p-6 flex flex-col justify-end">
-                            <p className="text-white text-4xl font-bold">25+</p>
+                            <p className="text-white text-4xl font-bold">30</p>
                             <p className="text-white/60 text-sm mt-1 font-medium">Districts Connected</p>
                         </div>
                     </div>

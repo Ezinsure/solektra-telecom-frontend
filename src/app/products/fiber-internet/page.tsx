@@ -2,8 +2,8 @@
 
 import React, { useMemo } from "react";
 import Image from "next/image";
-import FiberInter from "../../../../public/assets/images/fiber.png";
-import ReliableImg from "../../../../public/assets/images/reliablefi.png";
+import FiberInter from "../../../../public/assets/images/fiber.jpg";
+import ReliableImg from "../../../../public/assets/images/reliablefi.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -166,7 +166,7 @@ const FiberInternetPage = () => {
               <div className="grid grid-cols-3 gap-3">
                 {[
                   ["1 Gbps", "Peak speed"],
-                  ["< 5ms", "Latency"],
+                  ["< 10ms", "Latency"],
                   ["99.9%", "Uptime SLA"],
                 ].map(([val, label]) => (
                   <div data-aos="zoom-in-left"
