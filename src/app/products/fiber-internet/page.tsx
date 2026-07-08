@@ -166,7 +166,7 @@ const FiberInternetPage = () => {
               <div className="grid grid-cols-3 gap-3">
                 {[
                   ["1 Gbps", "Peak speed"],
-                  ["< 10ms", "Latency"],
+                  ["< 20ms", "Latency"],
                   ["99.9%", "Uptime SLA"],
                 ].map(([val, label]) => (
                   <div data-aos="zoom-in-left"

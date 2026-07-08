@@ -284,7 +284,7 @@ const VoLTEPage = () => {
                                     href="/packages?cat=volte&sub=packages"
                                     className="inline-flex items-center gap-2 bg-[#e88824] hover:bg-[#d07720] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shadow-[0_4px_20px_rgba(232,136,36,0.35)]"
                                 >
-                                    Check compatibility
+                                    View Packages
                                     <ChevronRight size={16} />
                                 </Link>
                                 <button data-aos="fade-left" data-aos-delay="300"

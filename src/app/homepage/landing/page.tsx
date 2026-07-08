@@ -357,7 +357,7 @@ const LandingPage = () => {
                                         <Image
                                             src={product.image}
                                             alt={product.title}
-                                            className="w-full h-[200px] sm:h-[450px] object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="w-full h-[200px] sm:h-[450px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                             priority={index === 0}
                                         />
                                         {/* Title overlay on hover */}

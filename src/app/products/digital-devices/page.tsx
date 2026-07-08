@@ -126,7 +126,7 @@ const steps = [
     {
         num: "02",
         title: "Pay a small deposit",
-        desc: "Get started with an affordable initial payment — no credit check.",
+        desc: "Get started with an affordable initial payment.",
     },
     {
         num: "03",
@@ -241,8 +241,7 @@ const DigitalDevice = () => {
                                 {[
                                     "Low deposit",
                                     "Daily · Weekly · Monthly",
-                                    "Full ownership",
-                                    "No credit check",
+                                    "Full ownership"
                                 ].map((tag) => (
                                     <span
                                         key={tag}

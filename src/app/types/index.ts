@@ -10,6 +10,7 @@ export interface Plan {
   speed?: string;
   popular?: boolean;
   unlimited?: boolean;
+  image?: string;
 }
 
 export interface PlanSection {
