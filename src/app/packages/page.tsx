@@ -51,7 +51,7 @@ const PricingPage = ({ searchParams }: Props) => {
           activeCat={activeCat}
           activeSub={activeSub}
           onSelect={handleSelect} />
-        <PlanGrid section={currentSection} onSelect={setSelectedPlan} />
+        <PlanGrid section={currentSection} onSelect={setSelectedPlan} activeCat={activeCat} />
       </div>
 
       {selectedPlan && (

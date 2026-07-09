@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Mail, PhoneCall } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import { motion } from "framer-motion";
-
+import { HiCheck } from "react-icons/hi";
 
 const contacts = [
   {
@@ -32,6 +32,37 @@ const contacts = [
     label: "WhatsApp",
     value: "+250 784 647 3",
     icon: <BsWhatsapp color="white" size={16} />,
+  },
+];
+
+const benefits = [
+  {
+    id: 1,
+    desc: "Dedicated and high-speed fiber internet connectivity . ",
+  },
+  {
+    id: 2,
+    desc: "Flexible bandwidth capacities tailored to your needs .",
+  },
+  {
+    id: 3,
+    desc: "Nationwide coverage across Rwanda",
+  },
+  {
+    id: 4,
+    desc: "Stable and secure internet performance .",
+  },
+  {
+    id: 5,
+    desc: "Professional installation and technical support . ",
+  },
+  {
+    id: 6,
+    desc: "Service Level Agreements (SLAs) for business continuity .",
+  },
+  {
+    id: 7,
+    desc: "Competitive and reasonable pricing .",
   },
 ];
 // Reusable fade variant
@@ -120,22 +151,23 @@ const FiberInternetPage = () => {
               </motion.p>
               <div className="text-3xl md:text-[2.5rem] font-semibold text-white leading-[1.15] mb-6">
                 <motion.span
-                  className="block text-[#0072CE]"
-                  variants={fadeRight}
-                  initial="hidden"
-                  animate="show"
-                  transition={{ duration: 0.55, delay: 0.35, ease: "easeOut" }}
-                >
-                  Internet that moves at the{" "}
-                </motion.span>
-                <motion.span
                   className="block text-[#e88824]"
                   variants={fadeRight}
                   initial="hidden"
                   animate="show"
                   transition={{ duration: 0.55, delay: 0.35, ease: "easeOut" }}
                 >
-                  speed of light
+                  Reliable Dedicated Fiber {' '}
+                </motion.span>
+
+                <motion.span
+                  className="block text-[#0072CE]"
+                  variants={fadeRight}
+                  initial="hidden"
+                  animate="show"
+                  transition={{ duration: 0.55, delay: 0.35, ease: "easeOut" }}
+                >
+                  Internet Across Rwanda
                 </motion.span>
               </div>
 
@@ -147,18 +179,10 @@ const FiberInternetPage = () => {
                 transition={{ duration: 0.55, delay: 0.35, ease: "easeOut" }}
               >
                 <p className=" text-[15px] leading-relaxed mb-6">
-                  At SOLEKTRA Telecom, we deliver the power of{" "}
-                  <strong className="text-[#0072CE] font-medium">
-                    fiber-optic internet
-                  </strong>{" "}
-                  — the fastest, most reliable, and future-ready broadband
-                  available today. Stream 4K, video conference, game online, and
-                  run your business without compromise.
+                  At Solektra Telecom, we provide {' '} <strong className="text-[#0072CE] font-medium">dedicated fiber internet</strong>  services with customizable bandwidth capacities to match your requirements. Whether you need internet for a small office, a large enterprise, a school, or a government institution, we deliver scalable solutions at competitive and affordable prices.
                 </p>
                 <div className="border-l-2 border-[#e88824]/50 pl-4 text-[#0a0a0a]/75 text-[14px] leading-relaxed mb-8">
-                  Unlike copper or cable, fiber transmits data as pulses of light
-                  — immune to interference, immune to distance degradation, and
-                  ready for whatever tomorrow demands.
+                  Stay connected with high-speed, secure, and reliable internet designed to meet the needs of businesses, organizations, and institutions of all sizes.
                 </div>
               </motion.div>
 
@@ -183,6 +207,46 @@ const FiberInternetPage = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="whypage" className=" py-5 border-t border-white/5">
+        <div className="container mx-auto max-w-7xl px-6">
+          <div data-aos="fade-down" data-aos-delay="300" className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-4">
+              <span className="w-5 h-px bg-[#0a0a0a]" />
+              Why Solektra Fiber Internet
+              <span className="w-5 h-px bg-[#0a0a0a]" />
+            </span>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-3">
+              high-speed, secure, and reliable internet
+            </h2>
+            <p className="text-[#8faec8] text-sm max-w-xl mx-auto">
+              Get connected today with Solektra Fiber Internet – reliable, scalable, and available across Rwanda.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {benefits.map((b) => (
+              <div data-aos="flip-left" data-aos-delay="300"
+                key={b.id}
+                className="group relative bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 hover:border-[#00C8F0]/30 hover:bg-white/[0.055] transition-all duration-300"
+              >
+                {/* Glow on hover */}
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ boxShadow: "inset 0 0 30px rgba(0,200,240,0.05)" }}
+                />
+
+                <div className="w-7 h-7 rounded-xl bg-[#00C8F0]/10 text-[#00C8F0] flex items-center justify-center mb-4 group-hover:bg-[#00C8F0]/20 transition-colors duration-300">
+                  <HiCheck size={20} />
+                </div>
+                <p className="text-[#7a9ab5] text-sm leading-relaxed">
+                  {b.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

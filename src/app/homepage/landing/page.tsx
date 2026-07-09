@@ -76,7 +76,7 @@ const services = [
         image: FiberInternet,
         theme: "dark",
         href: "/products/fiber-internet",
-        buyHref: "/packages?cat=fiber&sub=home",
+        buyHref: "/products/fiber-internet",
     },
     {
         key: "devices",
