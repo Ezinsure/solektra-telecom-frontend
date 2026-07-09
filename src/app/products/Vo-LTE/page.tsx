@@ -345,7 +345,7 @@ const VoLTEPage = () => {
                     <div data-aos="fade-down" data-aos-delay="300" className="text-center mb-14">
                         <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-4">
                             <span className="w-5 h-px bg-[#0a0a0a]" />
-                            Why VoLTE
+                            Why Solektra VoLTE
                             <span className="w-5 h-px bg-[#0a0a0a]" />
                         </span>
                         <h2 className="text-2xl md:text-3xl font-semibold text-white mb-3">

@@ -5,7 +5,7 @@ export interface Plan {
   vol: string;
   unit?: string;
   price: string;
-  priceRaw: number;
+  priceRaw?: number;
   validity: string;
   speed?: string;
   popular?: boolean;
@@ -21,7 +21,7 @@ export interface PlanSection {
   monthly?: Plan[];
 }
 
-export type CategoryKey = "4g" | "volte" | "router" | "fiber" | "devices";
+export type CategoryKey = "4g" | "volte" | "devices";
 
 export interface SubItem {
   key: string;
