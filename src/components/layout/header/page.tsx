@@ -161,19 +161,20 @@ const HeaderPage = () => {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-[#0a0a0a]/70 hover:text-[#0072CE] py-2.5 border-b border-gray-50 transition-colors duration-150"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm font-medium text-[#0a0a0a]/70 hover:bg-[#0072CE] py-2.5 border-b border-gray-100 transition-colors duration-150"
             >
               {link.label}
             </Link>
           ))}
-          <div className="flex flex-col gap-2 mt-4">
+          {/* <div className="flex flex-col gap-2 mt-4">
             <Link
               href="#"
               className="text-sm font-medium text-center text-[#0072CE] border border-[#0072CE] px-4 py-2.5 rounded-lg"
             >
               Login
             </Link>
-          </div>
+          </div> */}
         </div>
       )}
     </header>
