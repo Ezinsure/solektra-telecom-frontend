@@ -3,6 +3,7 @@ import { Plan, CategoryKey } from "../types";
 import { IoMdCall } from "react-icons/io";
 import RouterImg from "../../../public/assets/images/routerimge.jpg";
 import SmartphoneImg from "../../../public/assets/images/galaxy.jpg";
+import { Dialog, DialogContent, DialogTrigger } from "../../components/ui/dialog";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const deviceImages: Record<string, any> = {
@@ -42,11 +43,28 @@ export function PlanCard({ plan, activeCat, onSelect }: PlanCardProps) {
         {/* image */}
         <div className="bg-gradient-to-b from-gray-50 to-white flex items-center justify-center h-44 px-6 pt-4 pb-2">
           {img ? (
-            <Image
-              src={img}
-              alt={plan.vol}
-              className="h-36 w-full object-contain"
-            />
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="relative h-44 w-full cursor-zoom-in">
+                  <Image
+                    src={plan.image || img}
+                    alt={plan.vol}
+                    fill
+                    className="object-cover rounded-t-xl"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl border-none bg-transparent shadow-none p-0">
+                <div className="relative w-full h-[80vh]">
+                  <Image
+                    src={plan.image || img}
+                    alt={plan.vol}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
           ) : (
             <div className="h-36 w-full bg-gray-100 rounded-xl flex items-center justify-center text-gray-300 text-xs">
               No image

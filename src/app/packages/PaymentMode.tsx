@@ -63,7 +63,7 @@ export function PaymentModal({ plan, onClose }: PaymentModalProps) {
             aria-labelledby="modal-title"
         >
             <div className="bg-white rounded-xl border border-gray-200 p-6 w-full max-w-sm shadow-xl">
-                {!success ? (
+                {/* {!success ? (
                     <>
                         <div className="flex items-start justify-between mb-4">
                             <h3 id="modal-title" className="text-base font-medium uppercase text-gray-900">
@@ -80,7 +80,6 @@ export function PaymentModal({ plan, onClose }: PaymentModalProps) {
                             </button>
                         </div>
 
-                        {/* Plan summary */}
                         <div className="bg-gray-50 rounded-lg p-3.5 mb-4 space-y-2">
                             <Row label="Plan" value={`${plan.vol}${plan.unit ? ` · ${plan.unit}` : ""}`} />
                             <Row label="Validity" value={plan.validity} />
@@ -95,7 +94,6 @@ export function PaymentModal({ plan, onClose }: PaymentModalProps) {
                             </div>
                         </div>
 
-                        {/* Phone */}
                         <div className="mb-4">
                             <label className="block text-xs font-medium text-gray-500 mb-1.5" htmlFor="phone">
                                 Phone number
@@ -111,7 +109,7 @@ export function PaymentModal({ plan, onClose }: PaymentModalProps) {
                             {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
                         </div>
 
-                        {/* Payment method */}
+                        
                         <div className="mb-5">
                             <p className="text-xs font-medium text-gray-500 mb-2">Payment method</p>
                             <div className="grid grid-cols-3 gap-2">
@@ -160,9 +158,37 @@ export function PaymentModal({ plan, onClose }: PaymentModalProps) {
                             Done
                         </button>
                     </div>
-                )}
+                )} */}
+                <div className="rounded-xl border border-[#0072CE30] bg-blue-50 p-4">
+                    <h3 className="text-lg font-semibold mb-4">
+                        USSD Payment Available
+                        <p className="italic text-gray-500 font-medium text-base">Kwishyura Ukoresheje USSD</p>
+                    </h3>
+
+                    <p className="mt-2 text-sm ">
+                        Online payments are currently under development. For now, you can purchase
+                        this package using our USSD service.
+                        <p className="text-sm text-gray-500 italic mt-1">
+                            Ubu buryo bwo kwishyura buracyategurwa. Mu gihe butarashyirwa
+                            mu bikorwa, ushobora kugura iyi pake ukoresheje USSD.
+                        </p>
+                    </p>
+
+                    <div className="mt-4 rounded-lg bg-white p-3 text-center border border-[#0072CE30]">
+                        <p className="text-sm text-gray-600">Dial (Kanda)</p>
+                        <p className="text-2xl font-bold text-[#0072CE]">
+                            *900#
+                        </p>
+                    </div>
+
+                    <p className="mt-4 text-sm text-gray-600">
+                        Follow the prompts to select your package and complete your purchase.
+                        <p className="text-sm text-gray-500 italic mt-1">Urikiza amabwiriza agaragara kuri telefoni yawe kugira ngo ubashe kugura iyi pake.</p>
+                    </p>
+                </div>
             </div>
         </div>
+
     );
 }
 

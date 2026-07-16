@@ -4,7 +4,7 @@ export interface Plan {
   id: string;
   vol: string;
   unit?: string;
-  price: string;
+  price?: string;
   priceRaw?: number;
   validity: string;
   speed?: string;
