@@ -425,7 +425,7 @@ export const plansData: Record<string, PlanSection> = {
       {
         id: "ds-1",
         image: "/assets/images/phone.png",
-        vol: "Samsung Galaxy A12",
+        vol: "Samsung Galaxy A17",
         unit: "Phone",
         // price: "35,000 RWF",
         // priceRaw: 35000,
@@ -435,7 +435,7 @@ export const plansData: Record<string, PlanSection> = {
       {
         id: "ds-2",
         image: "/assets/images/phone.png",
-        vol: "Samsung Galaxy A05",
+        vol: "Samsung Galaxy A07",
         unit: "Phone",
         // price: "80,000 RWF",
         // priceRaw: 80000,

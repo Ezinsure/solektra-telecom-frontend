@@ -97,7 +97,7 @@ export function PlanCard({ plan, activeCat, onSelect }: PlanCardProps) {
           {/* contact */}
           <div className="flex items-center gap-1.5 text-[11px] text-gray-400">
             <IoMdCall className="w-3 h-3 shrink-0" />
-            Call: <a href="tel:+250 794 766 463" className="text-[#1d75b3] hover:underline font-medium">+250 794 766 463</a>
+            Call: <a href="tel:1150" className="text-[#1d75b3] hover:underline font-medium">1150</a>
           </div>
           <a href="https://wa.me/250794766463" target="_blank" rel="noopener noreferrer" className="text-[#1d75b3] hover:underline font-medium">
             <button
