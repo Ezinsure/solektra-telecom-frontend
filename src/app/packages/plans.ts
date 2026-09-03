@@ -457,11 +457,12 @@ export const plansData: Record<string, PlanSection> = {
         vol: "Samsung Galaxy A56",
         unit: "Phone",
         // popular: true,
+        speed: "RAM: 8 GB · ROM: 128 GB",
         validity: "1 day",
       },
       {
         id: "ds-5",
-        image: "/assets/images/tecnocamon50.jpg",
+        image: "/assets/images/spark-50.webp",
         vol: "Techno Camon 50",
         unit: "Phone",
         // price: "35,000 RWF",
@@ -512,7 +513,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-10",
-        image: "/assets/images/tecnoSpark40.jpg",
+        image: "/assets/images/saprk40.webp",
         vol: "Techno Spark 40",
         unit: "Phone",
         // price: "80,000 RWF",
