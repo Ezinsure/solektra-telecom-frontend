@@ -66,7 +66,8 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         <HeaderPage />
         <AOSInitializer />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children}</main>
         <FooterPage />
       </body>
     </html>

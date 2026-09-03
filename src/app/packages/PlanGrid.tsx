@@ -41,7 +41,7 @@ const PlanGrid = ({ section, activeCat, onSelect }: PlanGridProps) => {
         (section.monthly?.length ?? 0) > 0;
 
     return (
-        <div className="flex-1  overflow-auto p-10 bg-[#f5f0e870] rounded-3xl ">
+        <div className="flex-1  overflow-auto scrollbar-none p-10 bg-[#f5f0e870] rounded-3xl ">
             {/* Header */}
             <div className="mb-5">
                 <h2 className="text-[15px] font-medium text-gray-900">{section.title}</h2>

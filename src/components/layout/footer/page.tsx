@@ -39,10 +39,10 @@ const products = [
 ];
 
 const support = [
-  "info@solektra.co",
-  "+250 794 766 463 / 1150",
-  "KABC Building, 6th Floor",
-  "KN 5 RD, Kigali-Rwanda",
+  { id: 1, label: "info@solektra.co", href: "mailto:info@solektra.co" },
+  { id: 2, label: "+250 794 766 463 / 1150", href: "tel:+250794766463" },
+  { id: 3, label: "KABC Building, 6th Floor", href: "/contact" },
+  { id: 4, label: "KN 5 RD, Kigali-Rwanda", href: "/contact" },
 ];
 
 const FooterPage = () => {
@@ -122,12 +122,12 @@ const FooterPage = () => {
                 </p>
                 <ul className="flex flex-col gap-3">
                   {support.map((item) => (
-                    <li key={item}>
+                    <li key={item.id}>
                       <a
-                        href="#"
+                        href={item.href}
                         className="text-white/70 hover:text-[#e88824] text-sm transition-colors duration-200"
                       >
-                        {item}
+                        {item.label}
                       </a>
                     </li>
                   ))}
