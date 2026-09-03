@@ -462,7 +462,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-5",
-        image: "/assets/images/spark-50.webp",
+        image: "/assets/images/camon50.webp",
         vol: "Techno Camon 50",
         unit: "Phone",
         // price: "35,000 RWF",
@@ -482,7 +482,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-7",
-        image: "/assets/images/infinixHot50i.jpg",
+        image: "/assets/images/infinixHot50.webp",
         vol: "Infinix Hot 50i",
         unit: "Phone",
         // price: "35,000 RWF",
@@ -492,7 +492,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-8",
-        image: "/assets/images/infinixHot70.jpg",
+        image: "/assets/images/infinixHot70.webp",
         vol: "Infinix Hot 70",
         unit: "Phone",
         // price: "80,000 RWF",
@@ -503,7 +503,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-9",
-        image: "/assets/images/tecnoSpark50.jpg",
+        image: "/assets/images/spark-50.webp",
         vol: "Techno Spark 50",
         unit: "Phone",
         // price: "35,000 RWF",
