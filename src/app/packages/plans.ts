@@ -424,8 +424,13 @@ export const plansData: Record<string, PlanSection> = {
     daily: [
       {
         id: "ds-1",
+<<<<<<< HEAD
         image: "/assets/images/galaxya06.jpg",
         vol: "Samsung Galaxy A06",
+=======
+        image: "/assets/images/phone.png",
+        vol: "Samsung Galaxy A17",
+>>>>>>> 0943e6712f8d2336e5388d4bf4e90d274a1b92a2
         unit: "Phone",
         // price: "35,000 RWF",
         // priceRaw: 35000,
@@ -434,6 +439,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-2",
+<<<<<<< HEAD
         image: "/assets/images/galaxya07.jpg",
         vol: "Samsung Galaxy A07",
         unit: "Phone",
@@ -456,6 +462,10 @@ export const plansData: Record<string, PlanSection> = {
         id: "ds-4",
         image: "/assets/images/galaxya56.jpg",
         vol: "Samsung Galaxy A56",
+=======
+        image: "/assets/images/phone.png",
+        vol: "Samsung Galaxy A07",
+>>>>>>> 0943e6712f8d2336e5388d4bf4e90d274a1b92a2
         unit: "Phone",
         // price: "80,000 RWF",
         // priceRaw: 80000,
