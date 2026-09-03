@@ -482,7 +482,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-7",
-        image: "/assets/images/infinixHot50.webp",
+        image: "/assets/images/Infinix-Hot-50i.png",
         vol: "Infinix Hot 50i",
         unit: "Phone",
         // price: "35,000 RWF",
@@ -492,7 +492,7 @@ export const plansData: Record<string, PlanSection> = {
       },
       {
         id: "ds-8",
-        image: "/assets/images/infinixHot70.webp",
+        image: "/assets/images/hot70.png",
         vol: "Infinix Hot 70",
         unit: "Phone",
         // price: "80,000 RWF",
