@@ -140,7 +140,7 @@ const LandingPage = () => {
 
     return (
         <main className="bg-white text-[#0a0a0a] overflow-x-hidden">
-            <div className="relative w-full h-[93vh] overflow-hidden">
+            <div className="relative w-full h-[90vh] overflow-hidden">
                 <Carousel
                     opts={{ loop: true, align: "start" }}
                     plugins={[autoplayPlugin]}

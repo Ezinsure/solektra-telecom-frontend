@@ -5,7 +5,7 @@ import JsonLd from "@/components/JsonLd";
 const fiberProductSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Fiber Internet Package",
+  name: "Fiber Internet",
   description: "Gigabit-speed fiber internet delivered to homes and businesses in Kigali, Rwanda.",
   brand: {
     "@type": "Brand",

@@ -42,7 +42,7 @@ const SidebarPage = ({ activeCat, activeSub, onSelect }: SidebarProps) => {
 
   return (
     <nav
-      className="w-56 shrink-0  py-10 bg-[#f5f0e870] rounded-3xl px-3 overflow-auto hidden lg:block "
+      className=" w-40 sm:w-56 shrink-0  py-10 bg-[#f5f0e870] rounded-3xl px-3 overflow-auto block "
       aria-label="Plan categories"
     >
       {categories.map((cat) => {
@@ -51,7 +51,7 @@ const SidebarPage = ({ activeCat, activeSub, onSelect }: SidebarProps) => {
           <div key={cat.key} id={cat.key}>
             <button
               onClick={() => toggleCat(cat.key)}
-              className={`w-full flex  rounded-md  items-center justify-between my-4 px-4 py-2 text-sm font-medium transition-colors text-left cursor-pointer ${activeCat === cat.key
+              className={`w-full flex  rounded-md  items-center justify-between my-4 lg:px-4 py-2 text-sm font-medium transition-colors text-left cursor-pointer ${activeCat === cat.key
                 ? "text-[#1d75b3] bg-[#f5f0e8]"
                 : "text-gray-700 hover:bg-gray-50"
                 }`}

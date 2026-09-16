@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import HeaderPage from "@/components/layout/header/page";
 import AOSInitializer from "@/components/AOSinitializer";
 import JsonLd from "@/components/JsonLd";
+import CookieConsent from "@/components/cookie-consent/CookieConsent";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -69,6 +70,7 @@ export default function RootLayout({
         <main className="flex-1">
           {children}</main>
         <FooterPage />
+        <CookieConsent />
       </body>
     </html>
   );
