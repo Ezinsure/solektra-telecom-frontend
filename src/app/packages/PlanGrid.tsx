@@ -24,7 +24,7 @@ function GridSection({
             <p className="text-[10px] font-medium uppercase tracking-widest text-gray-400 mb-3">
                 {label}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-3">
                 {plans.map((plan) => (
                     // <PlanCard key={plan.id} plan={plan} onSelect={onSelect} />
                     <PlanCard key={plan.id} plan={plan} activeCat={activeCat} onSelect={onSelect} />

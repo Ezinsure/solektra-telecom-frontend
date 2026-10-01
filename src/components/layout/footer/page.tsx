@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../../../public/assets/logos/logo.png";
+import Logo from "../../../../public/logo.png";
 import { HiArrowRight } from "react-icons/hi";
 import { SiWhatsapp, SiInstagram } from "react-icons/si";
 import { RiTwitterXFill } from "react-icons/ri";
@@ -47,8 +47,8 @@ const support = [
 
 const FooterPage = () => {
   return (
-    <footer style={{ backgroundColor: "#0072CE" }} className="text-white">
-      <div className="container mx-auto px-4 md:px-16 py-14">
+    <footer style={{ backgroundColor: "#0072CE" }} className="text-white rounded-t-lg">
+      <div className="container mx-auto px-4 md:px-16 py-10 ">
         <div className="flex flex-col md:flex-row gap-10 md:gap-0">
           <div className="flex flex-col gap-2 md:w-[40%] md:pr-10">
             <Image
