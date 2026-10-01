@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../../public/assets/logos/logo-dark.png";
+import Logo from "../../../../public/logo-dark.png";
 import { useEffect, useState } from "react";
 import { HiChevronDown } from "react-icons/hi";
 import {

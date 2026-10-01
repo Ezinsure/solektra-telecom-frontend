@@ -1,0 +1,23 @@
+# Solektra Telecom
+
+> Solektra Telecom is an internet and telecom provider in Rwanda, based in Kigali. It offers dedicated fiber internet, 4G internet packages, VoLTE (HD voice over 4G) calling, routers, and smartphones on pay-as-you-go instalment plans for homes, businesses, schools, and institutions.
+
+Key facts:
+- Headquarters: KABC Building, 6th Floor, KN 5 Rd, Kigali, Rwanda
+- Customer care: 1150 or +250 794 766 463 (also on WhatsApp)
+- Email: info@solektra.co
+- Opening hours: Monday to Saturday, 8:00 to 17:00
+- Fiber: up to 1 Gbps, under 20 ms latency, 99.9% uptime SLA, flexible bandwidth for businesses and institutions
+
+## Products
+- [Fiber Internet](https://www.solektratelecom.com/products/fiber-internet): Dedicated fiber for homes, offices, schools and government institutions, with SLAs and professional installation
+- [4G Internet](https://www.solektratelecom.com/products/4G-internet): Affordable high-speed 4G data packages and home/pocket routers
+- [VoLTE](https://www.solektratelecom.com/products/Vo-LTE): HD voice calls over the Solektra 4G LTE network
+- [Digital Devices](https://www.solektratelecom.com/products/digital-devices): Smartphones and routers with pay-as-you-go instalment plans
+
+## Buying
+- [Packages and prices](https://www.solektratelecom.com/packages): All 4G, VoLTE and device packages
+
+## Company
+- [About Solektra](https://www.solektratelecom.com/about)
+- [Contact and location](https://www.solektratelecom.com/contact)

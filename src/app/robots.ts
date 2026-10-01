@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin/"], 
+      disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://solektratelecom.com/sitemap.xml",
+    sitemap: "https://www.solektratelecom.com/sitemap.xml",
+    host: "https://www.solektratelecom.com",
   };
 }

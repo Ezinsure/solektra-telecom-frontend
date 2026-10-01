@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../../../public/assets/logos/logo.png";
+import Logo from "../../../../public/logo.png";
 import { HiArrowRight } from "react-icons/hi";
 import { SiWhatsapp, SiInstagram } from "react-icons/si";
 import { RiTwitterXFill } from "react-icons/ri";

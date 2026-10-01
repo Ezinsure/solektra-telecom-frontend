@@ -98,13 +98,13 @@ export default function CookieConsent() {
                             </Button>
                             <Button
                                 onClick={rejectAll}
-                                className="rounded-lg bg-[#F7941D] text-xs hover:bg-white hover:text-[#F7941D] hover:border-[#F7941D]"
+                                className="rounded-lg text-[#030229] bg-white border border-[#F7941D] text-xs hover:bg-whites hover:text-[#F7941D] hover:border-[#F7941D]"
                             >
                                 Reject All Non-Essential
                             </Button>
                             <Button
                                 onClick={() => setShowPreferences(true)}
-                                className="rounded-lg bg-[#F7941D] text-xs hover:bg-white hover:text-[#F7941D] hover:border-[#F7941D]"
+                                className="rounded-lg text-[#030229] border border-[#F7941D] bg-[#aF7941D] text-xs hover:bg-white hover:text-[#F7941D] hover:border-[#F7941D]"
                             >
                                 Manage Preferences
                             </Button>
