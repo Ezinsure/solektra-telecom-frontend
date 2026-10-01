@@ -100,7 +100,7 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
                             <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <Dialog.Title
                                     as="div"
-                                    className="flex justify-between items-center border-b border-gray-100 pb-4"
+                                    className="flex justify-between items-center pb-4"
                                 >
                                     <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
                                         <IoLogInOutline className="w-5 h-5 text-[#0072CE]" />

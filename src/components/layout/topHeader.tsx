@@ -9,7 +9,7 @@ const TopHeader = () => {
     const [balanceModalOpen, setBalanceModalOpen] = useState(false);
 
     return (
-        <div className="bg-[#0072CE] text-white hidden lg:flex  flex-row justify-between items-center px-12 py-1 text-xs ">
+        <div className="bg-[#0072CE] text-white hidden lg:flex  flex-row justify-between items-center px-12 py-1 text-xs rounded-b-md">
             <div className="flex flex-row justify-between text-xs  gap-2">
                 <div className="flex gap-4 font-semibold">
                     <div className="flex  gap-1">

@@ -30,7 +30,7 @@ const contacts = [
   },
   {
     label: "WhatsApp",
-    value: "+250 784 647 3",
+    value: "+250 794 766 463",
     icon: <BsWhatsapp color="white" size={16} />,
   },
 ];

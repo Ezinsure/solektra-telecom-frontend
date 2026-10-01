@@ -1,24 +1,22 @@
 import type { MetadataRoute } from "next";
 
+const baseUrl = "https://www.solektratelecom.com";
+
+const routes: { path: string; lastModified: string }[] = [
+  { path: "", lastModified: "2026-09-30" },
+  { path: "/products", lastModified: "2026-09-30" },
+  { path: "/products/4G-internet", lastModified: "2026-09-30" },
+  { path: "/products/fiber-internet", lastModified: "2026-09-30" },
+  { path: "/products/Vo-LTE", lastModified: "2026-09-30" },
+  { path: "/products/digital-devices", lastModified: "2026-09-30" },
+  { path: "/packages", lastModified: "2026-09-30" },
+  { path: "/about", lastModified: "2026-09-30" },
+  { path: "/contact", lastModified: "2026-09-30" },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://solektratelecom.com";
-
-  const routes = [
-    "",
-    "/products",
-    "/products/4G-internet",
-    "/products/fiber-internet",
-    "/products/Vo-LTE",
-    "/products/digital-devices",
-    "/packages",
-    "/about",
-    "/contact",
-  ];
-
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "daily" : "weekly",
-    priority: route === "" ? 1 : 0.8,
+  return routes.map(({ path, lastModified }) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(lastModified),
   }));
 }

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Homeimg1 from '../../../../public/assets/images/img5g.jpg'
 import Homeimg2 from '../../../../public/assets/images/solektra4g.png'
-import Homeimg3 from '../../../../public/assets/images/phones.avif'
+// import Homeimg3 from '../../../../public/assets/images/phones.avif'
 import Router from '../../../../public/assets/images/router1.png'
 import Routerdevice from '../../../../public/assets/images/routerdevice.webp'
 import Smartphone1 from '../../../../public/assets/images/smartpnobg.png'
@@ -26,8 +26,8 @@ const heroSlides = [
     {
         image: Homeimg1,
         eyebrow: "4G Network",
-        title: "Internet that keeps pace",
-        titleAccent: "with your day",
+        title: "Fast 4G and fiber internet ",
+        titleAccent: "in Rwanda",
         desc: "Fast, reliable 4G coverage across the country — built for streaming, work, and everything between.",
         href: "/products/4G-internet",
     },
@@ -48,7 +48,7 @@ const heroSlides = [
         href: "/products",
     },
     {
-        image: Homeimg3,
+        image: Homeimg2,
         eyebrow: "Devices",
         title: "Smartphones made",
         titleAccent: "accessible for all",
@@ -140,7 +140,7 @@ const LandingPage = () => {
 
     return (
         <main className="bg-white text-[#0a0a0a] overflow-x-hidden">
-            <div className="relative w-full h-[93vh] overflow-hidden">
+            <div className="relative w-full h-[90vh] overflow-hidden">
                 <Carousel
                     opts={{ loop: true, align: "start" }}
                     plugins={[autoplayPlugin]}
