@@ -6,6 +6,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import React from "react";
+import Link from "next/dist/client/link";
 
 const socialLinks: { icon: React.ReactNode; label: string; href: string }[] = [
   {
@@ -36,13 +37,15 @@ const products = [
   { label: "Fiber Internet", href: "/products/fiber-internet" },
   { label: "VoLTE (Voice over 4G)", href: "/products/Vo-LTE" },
   { label: "Digital Services", href: "/products/digital-devices" },
+  { label: "Kinyarwanda", href: "/rw" },
 ];
 
 const support = [
-  { id: 1, label: "info@solektra.co", href: "mailto:info@solektra.co" },
-  { id: 2, label: "+250 794 766 463 / 1150", href: "tel:+250794766463" },
-  { id: 3, label: "KABC Building, 6th Floor", href: "/contact" },
-  { id: 4, label: "KN 5 RD, Kigali-Rwanda", href: "/contact" },
+  { id: 1, label: "FAQ", href: "/faq" },
+  { id: 2, label: "info@solektra.co", href: "mailto:info@solektra.co" },
+  { id: 3, label: "+250 794 766 463 / 1150", href: "tel:+250794766463" },
+  { id: 4, label: "KABC Building, 6th Floor", href: "/contact" },
+  { id: 5, label: "KN 5 RD, Kigali-Rwanda", href: "/contact" },
 ];
 
 const FooterPage = () => {
@@ -172,24 +175,24 @@ const FooterPage = () => {
             © {new Date().getFullYear()} Solektra Telecom. All rights reserved.
           </p>
           <div className="flex gap-5">
-            <a
-              href="#"
+            <Link
+              href="/privacy-notice"
               className="hover:text-white transition-colors duration-200"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/terms-of-service"
               className="hover:text-white transition-colors duration-200"
             >
               Terms of Service
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/cookie-policy"
               className="hover:text-white transition-colors duration-200"
             >
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

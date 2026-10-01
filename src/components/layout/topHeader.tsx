@@ -3,6 +3,7 @@ import RechargeModal from "../rechargeModal";
 import BalanceModal from "../balanceModal";
 import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { RiAddLine } from "react-icons/ri";
+import Link from "next/link";
 
 const TopHeader = () => {
     const [rechargeModalOpen, setRechargeModalOpen] = useState(false);

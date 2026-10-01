@@ -25,37 +25,36 @@ import { ChevronRight } from 'lucide-react';
 const heroSlides = [
     {
         image: Homeimg1,
-        eyebrow: "4G Network",
-        title: "Fast 4G and fiber internet ",
-        titleAccent: "in Rwanda",
-        desc: "Fast, reliable 4G coverage across the country — built for streaming, work, and everything between.",
+        eyebrow: "4G & Fiber Internet",
+        title: "Fast 4G and fiber internet",
+        titleAccent: "that keeps pace with your day",
+        desc: "Unlimited home internet from 20,000 RWF/month with the router included . Data bundles from 100 RWF.",
         href: "/products/4G-internet",
     },
     {
         image: Routerdevice,
-        eyebrow: "Routers",
-        title: "Stay connected,",
-        titleAccent: "anywhere you are",
-        desc: "Reliable routers built for homes and businesses — powered by our nationwide 4G network with zero setup hassle.",
-        href: "/products/digital-devices",
+        eyebrow: "Home Broadband",
+        title: "Unlimited home Wi-Fi,",
+        titleAccent: "no fiber line needed",
+        desc: "Plug in a Solektra 4G router and connect your whole home or office. Installed the same day, and you can cancel anytime.",
+        href: "/packages?cat=4g&sub=home",
     },
     {
         image: Homeimg2,
-        eyebrow: "SOLEKTRA Telecom",
-        title: "One network,",
-        titleAccent: "every connection",
-        desc: "Internet, voice, and devices — all from a single trusted provider built around you.",
-        href: "/products",
+        eyebrow: "Business Fiber",
+        title: "Dedicated fiber",
+        titleAccent: "for your business",
+        desc: "Up to 1 Gbps with a 99.9% uptime SLA for offices, schools, hotels and institutions across Rwanda.",
+        href: "/products/fiber-internet",
     },
     {
         image: Homeimg2,
-        eyebrow: "Devices",
-        title: "Smartphones made",
-        titleAccent: "accessible for all",
-        desc: "Own a quality smartphone through flexible PAYGO plans — no big upfront cost.",
+        eyebrow: "Smartphones",
+        title: "Smartphones on installment,",
+        titleAccent: "pay over up to 24 months",
+        desc: "Smartphones with flexible PAYGO plans and no big upfront cost.",
         href: "/products/digital-devices",
     },
-
 ];
 
 
@@ -146,8 +145,6 @@ const LandingPage = () => {
                     plugins={[autoplayPlugin]}
                     setApi={setApi}
                     className="w-full h-full"
-                    onMouseEnter={() => autoplayPlugin.stop()}
-                    onMouseLeave={() => autoplayPlugin.play()}
                 >
                     <CarouselContent className="h-full">
                         {heroSlides.map((slide, index) => (
@@ -162,7 +159,7 @@ const LandingPage = () => {
                                         sizes="100vw"
                                         className="object-cover object-center"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/5" />
                                 </div>
                             </CarouselItem>
                         ))}
@@ -337,8 +334,6 @@ const LandingPage = () => {
                     opts={{ loop: true, align: "start" }}
                     plugins={[productsAutoplay]}
                     className="w-full"
-                    onMouseEnter={() => productsAutoplay.stop()}
-                    onMouseLeave={() => productsAutoplay.play()}
                 >
                     <CarouselContent className="-ml-3 sm:-ml-4">
                         {products.map((product, index) => (

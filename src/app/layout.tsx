@@ -111,7 +111,7 @@ const data = {
         addressLocality: "Kigali",
         addressCountry: "RW",
       },
-      geo: { "@type": "GeoCoordinates", latitude: -1.9536, longitude: 30.0606 }, // TODO: verify
+      geo: { "@type": "GeoCoordinates", latitude: -1.9523913648697417, longitude: 30.091511373702126 },
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
