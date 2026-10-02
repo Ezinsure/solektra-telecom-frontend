@@ -4,10 +4,10 @@ import { useMemo, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Homeimg1 from '../../../../public/assets/images/img5g.jpg'
-import Homeimg2 from '../../../../public/assets/images/solektra4g.png'
-// import Homeimg3 from '../../../../public/assets/images/phones.avif'
+import Homeimg2 from '../../../../public/assets/images/Connected.png'
+import Homeimg3 from '../../../../public/assets/images/smartfone.jpg'
 import Router from '../../../../public/assets/images/router1.png'
-import Routerdevice from '../../../../public/assets/images/routerdevice.webp'
+import Routerdevice from '../../../../public/assets/images/routernew.png'
 import Smartphone1 from '../../../../public/assets/images/smartpnobg.png'
 import VoLTE from '../../../../public/assets/images/voicecall.png'
 import FiberInternet from '../../../../public/assets/images/fiber.jpg'
@@ -40,20 +40,20 @@ const heroSlides = [
         href: "/packages?cat=4g&sub=home",
     },
     {
+        image: Homeimg3,
+        eyebrow: "Smartphones",
+        title: "Smartphones on installment,",
+        titleAccent: "pay over up to 24 months",
+        desc: "Smartphones with flexible PAYGO plans and no big upfront cost.",
+        href: "/products/digital-devices",
+    },
+    {
         image: Homeimg2,
         eyebrow: "Business Fiber",
         title: "Dedicated fiber",
         titleAccent: "for your business",
         desc: "Up to 1 Gbps with a 99.9% uptime SLA for offices, schools, hotels and institutions across Rwanda.",
         href: "/products/fiber-internet",
-    },
-    {
-        image: Homeimg2,
-        eyebrow: "Smartphones",
-        title: "Smartphones on installment,",
-        titleAccent: "pay over up to 24 months",
-        desc: "Smartphones with flexible PAYGO plans and no big upfront cost.",
-        href: "/products/digital-devices",
     },
 ];
 

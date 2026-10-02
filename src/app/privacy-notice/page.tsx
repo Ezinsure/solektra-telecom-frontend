@@ -1,5 +1,3 @@
-// src/app/privacy-policy/page.tsx  →  /privacy-policy
-// DRAFT — have a lawyer review before publishing. Search this file for "TODO".
 import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 import { pageMetadata } from "@/lib/seo";
@@ -7,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
   description:
-    "How Solektra Telecom collects, uses and protects your personal data under Rwanda's Law No. 058/2021 on the protection of personal data and privacy.",
+    "How Solektra Telecom collects, uses and protects your personal data .",
   path: "/privacy-policy",
 });
 
@@ -15,34 +13,35 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPage title="Privacy Policy" >
       <p>
-        This Privacy Policy explains how [TODO: company legal name] (&quot;Solektra Telecom&quot;,
-        &quot;we&quot;, &quot;us&quot;) collects, uses, stores and protects personal data when you use
-        our website, our 4G, fiber and VoLTE services, and our device installment plans. We process
-        personal data in line with Law No. 058/2021 of 13/10/2021 relating to the protection of
-        personal data and privacy.
+        Solektra Telecom (“Solektra,” “we,” “our,” or “us”) respects clients&apos; privacy and is committed to protecting clients&apos; personal information.
+        This Privacy Policy explains how information is collected, used, disclosed, stored, and protected when clients access or use the Solektra Telecom website  and its related services.
       </p>
 
-      <h2>1. Who is responsible for your data</h2>
+      <h2> Who We Are </h2>
       <p>
-        Solektra Telecom is the data controller. Contact: KABC Building, 6th Floor, KN 5 Rd, Kigali,
-        Rwanda · <a href="mailto:info@solektra.co">info@solektra.co</a> · 1150 or +250 794 766 463.
-        [TODO: name or email of your Data Protection Officer, if you have appointed one.]
+        Solektra Telecom is a telecommunications company registered in Rwanda. We provide mobile and internet services, including voice, data, and digital devices.
       </p>
-
-      <h2>2. Personal data we collect</h2>
       <ul>
-        <li>Identity details: name, national ID or passport number (required for SIM and service registration).</li>
+        <li>Legal entity: SOLEKTRA Telecom</li>
+        <li>Registered address: Kigali, Rwanda</li>
+        <li>Customer support: info@solektra.co</li>
+      </ul>
+
+      <h2>Information Solektra May Collect</h2>
+      <ul>
         <li>Contact details: phone number, email address, physical address and installation location.</li>
         <li>Account and service data: packages purchased, recharges, data and call usage, device and SIM identifiers.</li>
-        <li>Payment data: MTN Mobile Money transaction references. We do not store your MoMo PIN.</li>
         <li>Installment data: information needed to assess and manage smartphone installment plans.</li>
-        <li>Website data: login details, pages visited, device and browser information, and cookies (see our <a href="/cookie-policy">Cookie Policy</a>).</li>
+        <li>Website data: login details, pages visited, device and browser information, and cookies.</li>
         <li>Communications: messages and calls with customer care, including WhatsApp.</li>
       </ul>
 
-      <h2>3. Why we use your data</h2>
+      <h2>How Solektra Obtains Information</h2>
+      <p> In most circumstances we collect informations directly from clients, for instance, when clients interact with our customer support department, when clients buy or use any of our products or services, or when clients visit our website.</p>
+
+      <h2> Why Solektra uses clients&apos; data</h2>
       <ul>
-        <li>To register, install, provide and support your services.</li>
+        <li>To register, install, provide and support clients&apos; services.</li>
         <li>To process payments, recharges and installment plans.</li>
         <li>To meet legal and regulatory obligations, including subscriber registration requirements.</li>
         <li>To keep our network and website secure and prevent fraud.</li>
@@ -50,57 +49,63 @@ export default function PrivacyPolicyPage() {
         <li>To send you service messages and, with your consent, offers. You can opt out of offers at any time.</li>
       </ul>
 
-      <h2>4. Who we share data with</h2>
-      <p>
-        We do not sell your personal data. We share it only when needed with: payment providers (MTN
-        Mobile Money), installation and technical partners working on our behalf, IT and hosting
-        providers, and public authorities when the law requires it. Anyone processing data for us
-        must protect it and use it only for our instructions.
+      <h2>Legal Basis for Processing</h2>
+      <p>  Where applicable, we process personal information on one or more lawful bases, including:
+        <ul>
+          <li>Your consent.</li>
+          <li>The performance of a contract or steps necessary to provide a requested service.</li>
+          <li>Compliance with legal obligations.</li>
+          <li>Legitimate interests, where permitted by law and where your rights do not override those interests.</li>
+        </ul>
       </p>
-
-      <h2>5. Where your data is stored</h2>
-      <p>
-        [TODO: confirm with your IT team and lawyer where customer data is stored. Rwandan law requires
-        personal data to be stored in Rwanda unless an authorisation from the National Cyber Security
-        Authority (NCSA) allows storage or transfer abroad. Describe your situation here.]
-      </p>
-
-      <h2>6. How long we keep data</h2>
+      <p>  Where processing relies on consent, you may withdraw that consent, subject to legal limitations and the consequences for features that depend on the information.</p>
+      <h2>How long Solektra keeps data</h2>
       <p>
         We keep personal data only as long as needed for the purposes above, or as long as the law
-        requires. [TODO: add your retention periods, e.g. account data for X years after the end of
-        service.]
+        requires.
       </p>
-
-      <h2>7. Your rights</h2>
-      <p>Under Rwandan law, you have the right to:</p>
+      <h2>Your Privacy Rights</h2>
+      <p>Under the privacy laws you have rights which may include the right to:</p>
       <ul>
-        <li>be informed about how your data is used and access a copy of it;</li>
-        <li>ask us to correct inaccurate data or delete data we no longer need;</li>
-        <li>object to processing, including for marketing;</li>
-        <li>withdraw your consent at any time where we rely on consent;</li>
-        <li>complain to the National Cyber Security Authority (NCSA).</li>
+        <li>Request access to your personal information.</li>
+        <li>Request correction of inaccurate or incomplete information.</li>
+        <li>Request erasure of information in appropriate circumstances.</li>
+        <li>Object to certain processing activities.</li>
+        <li>Withdraw consent where processing is based on consent.</li>
+        <li>Request a copy of eligible information in a portable format.</li>
+        <li>Lodge a complaint with the competent data protection authority.</li>
       </ul>
       <p>
-        To use these rights, email <a href="mailto:info@solektra.co">info@solektra.co</a> or visit our
+        To exercise your rights, email <a href="mailto:info@solektra.co">info@solektra.co</a> or visit our
         office. We may ask you to confirm your identity first.
       </p>
 
-      <h2>8. Security</h2>
+      <h2>Security</h2>
       <p>
-        We use technical and organisational measures to protect your data against loss, misuse and
+        We use technical and organisational measures to protect your information data against loss, misuse and
         unauthorised access. If a personal data breach occurs, we will notify the authorities and
         affected customers as required by law.
       </p>
 
-      <h2>9. Children</h2>
-      <p>Our services are intended for adults. We do not knowingly collect data from children without parental consent.</p>
-
-      <h2>10. Changes to this policy</h2>
-      <p>
-        We may update this policy. The date at the top shows the latest version, and we will inform
-        customers of important changes.
+      <h2>Children</h2>
+      <p>Our services are intended for adults. We do not knowingly collect data from children without parental consent.
+        Where we know that personal information relates to a child, we will handle it in accordance with applicable law, including any parental or guardian consent requirements. We do not knowingly collect children&apos;s information beyond what is lawfully permitted and necessary for the service.
       </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy to reflect changes in  our services, legal requirements, or data-handling practices.
+        The latest version will be made available through our website or an appropriate publication channel, with the updated effective date. Where required by law, we will notify users or obtain consent before implementing relevant changes.
+      </p>
+
+      <h2>Contact Us</h2>
+      <p>
+        For privacy questions, access or correction requests, or complaints about our handling of personal information, please  contact us at:
+      </p>
+      <ul>
+        <li>Email: info@solektra.co</li>
+        <li>Telephone: +250 794 766 463</li>
+      </ul>
     </LegalPage>
   );
 }
