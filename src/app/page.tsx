@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   },
   description:
     "Unlimited 4G home internet from 20,000 RWF/month, data bundles from 100 RWF, dedicated fiber for businesses, VoLTE calls and smartphones on instalment in Rwanda.",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: { en: "/", rw: "/rw", "x-default": "/" },
+  },
 };
 
 export default function HomePage() {

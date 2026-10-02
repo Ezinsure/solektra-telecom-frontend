@@ -12,6 +12,12 @@ const routes: { path: string; lastModified: string }[] = [
   { path: "/packages", lastModified: "2026-09-30" },
   { path: "/about", lastModified: "2026-09-30" },
   { path: "/contact", lastModified: "2026-09-30" },
+  { path: "/faq", lastModified: "2026-10-01" },
+  { path: "/rw", lastModified: "2026-10-01" },
+  { path: "/privacy-notice", lastModified: "2026-10-01" },
+  { path: "/terms-of-service", lastModified: "2026-10-01" },
+  { path: "/cookie-policy", lastModified: "2026-10-01" },
+  { path: "/site-map", lastModified: "2026-10-01" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
