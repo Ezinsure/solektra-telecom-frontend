@@ -55,7 +55,7 @@ const BalanceModal = ({ isOpen, onClose }: BalanceModalProps) => {
     const errorMsg = validatePhone(phoneNumber);
     setError(errorMsg);
   };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-anykw
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setSubmitted(true);

@@ -3,7 +3,7 @@ import VoLTEPage from "./Volte";
 import JsonLd from "@/components/JsonLd";
 import { pageMetadata, breadcrumb, aggregateOffer, SITE, ORG_ID } from "@/lib/seo";
 
-const PATH = "/products/Vo-LTE";
+const PATH = "https://www.solektratelecom.com/products/Vo-LTE";
 
 export const metadata: Metadata = pageMetadata({
   title: "VoLTE in Rwanda: HD Voice Call Packages from 500 RWF",

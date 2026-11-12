@@ -2,6 +2,18 @@ export type FaqItem = { q: string; a: string };
 
 export const faqEn: FaqItem[] = [
   {
+    q: "Can you connect me outside Kigali?",
+    a: "Yes. Our field team and distribution network serve customers across Rwanda, including locations where 4G coverage is limited or fiber is unavailable.",
+  },
+   {
+    q: "How quickly can I get connected?",
+    a: "We can connect you anywhere in Rwanda in eight hours or less, subject to order confirmation, equipment availability, site access, and a suitable installation location. Our team will confirm the arrangements when you contact us.",
+  },
+   {
+    q: "How much does Starlink cost in Rwanda?",
+    a: "Contact us for current plans and a personalised quotation. We’ll explain the equipment, installation, and subscription costs and help you explore affordable options.",
+  },
+  {
     q: "Which areas of Rwanda does Solektra Telecom cover?",
     a: "Solektra 4G internet and fiber internet are available in all 30 districts of Rwanda. Call 1150 or WhatsApp +250 794 766 463 with your location and our team will confirm the connection at your address.",
   },
@@ -48,6 +60,10 @@ export const faqEn: FaqItem[] = [
   {
     q: "How can I contact customer care?",
     a: "Call 1150 or +250 794 766 463, WhatsApp +250 794 766 463, or email info@solektra.co. Our office is at KABC Building, 6th Floor, KN 5 Rd, Kigali, open Monday to Saturday from 8:00 to 17:00.",
+  },
+   {
+    q: "Will you help after installation?",
+    a: "Yes. Our local call center provides guidance and support, with field assistance arranged where needed.",
   },
 ];
 

@@ -3,7 +3,7 @@ import Internet4GPage from "./FourGIInternet";
 import JsonLd from "@/components/JsonLd";
 import { pageMetadata, breadcrumb, aggregateOffer, SITE, ORG_ID } from "@/lib/seo";
 
-const PATH = "/products/4G-internet";
+const PATH = "https://www.solektratelecom.com/products/4G-internet";
 
 export const metadata: Metadata = pageMetadata({
     title: "4G Internet Bundles & Unlimited Home Broadband in Rwanda",

@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react";
 import Image from "next/image";
-import FiberInter from "../../../../public/assets/images/fiber.jpg";
+import FiberInter from "../../../../public/assets/images/fibersimage.avif";
 import ReliableImg from "../../../../public/assets/images/reliablefi.jpg";
 import {
   Carousel,
@@ -17,22 +17,19 @@ import { BsWhatsapp } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { HiCheck } from "react-icons/hi";
 
+const PHONE = "1150";
+const EMAIL = "info@solektra.co";
+const WHATSAPP = "250794766463";
+
+const whatsappUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Solektra, I'd like to know about fiber internet  and availability.")}`;
+const quoteUrl = `mailto:${EMAIL}?subject=${encodeURIComponent("Fiber Internet quotation request")}&body=${encodeURIComponent(
+  "Hello Solektra,\n\nI would like a quotation for Fiber Internet.\n\nLocation (district / sector):\nFor (home, business, school, farm, lodge):\nPhone number:\n\nThank you.",
+)}`;
+
 const contacts = [
-  {
-    label: "Call us",
-    value: "1150",
-    icon: <PhoneCall color="white" size={20} />,
-  },
-  {
-    label: "Email",
-    value: "info@solektra.co",
-    icon: <Mail color="white" size={18} />,
-  },
-  {
-    label: "WhatsApp",
-    value: "+250 794 766 463",
-    icon: <BsWhatsapp color="white" size={16} />,
-  },
+  { label: "Call us", value: PHONE, href: `tel:${PHONE}`, icon: <PhoneCall color="white" size={18} /> },
+  { label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, icon: <Mail color="white" size={16} /> },
+  { label: "WhatsApp", value: "+250 794 766 463", href: whatsappUrl, icon: <BsWhatsapp color="white" size={15} /> },
 ];
 
 const benefits = [
@@ -112,7 +109,7 @@ const FiberInternetPage = () => {
                 animate="show"
                 transition={{ duration: 0.55, delay: 0.35, ease: "easeOut" }}
               >
-                <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-[0_0_80px_rgba(232,136,36,0.12)]">
+                <div className="relative  overflow-hidden ring-1 ring-white/10 shadow-[0_0_80px_rgba(232,136,36,0.12)]">
                   <Carousel
                     opts={{ loop: true, align: "start" }}
                     plugins={[autoplayPlugin]}
@@ -146,7 +143,6 @@ const FiberInternetPage = () => {
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                 className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-[#0a0a0a]/75 font-semibold mb-4"
               >
-                <span className="w-4 h-px bg-[#0a0a0a]" />
                 Next-Generation Broadband
               </motion.p>
               <div className="text-3xl md:text-[2.5rem] font-semibold text-white leading-[1.15] mb-6">
@@ -215,7 +211,6 @@ const FiberInternetPage = () => {
         <div className="container mx-auto max-w-7xl px-6">
           <div data-aos="fade-down" data-aos-delay="300" className="text-center mb-14">
             <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-4">
-              <span className="w-5 h-px bg-[#0a0a0a]" />
               Why Solektra Fiber Internet
               <span className="w-5 h-px bg-[#0a0a0a]" />
             </span>
@@ -269,21 +264,20 @@ const FiberInternetPage = () => {
             <motion.div variants={fadeLeft} initial="hidden"
               animate="show"
               transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} className="flex flex-col sm:flex-row gap-4">
-              {contacts.map((c) => (
-                <div
+            {contacts.map((c) => (
+                <a
                   key={c.label}
-                  className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-5 py-3.5 min-w-[170px]"
+                  href={c.href}
+                  target={c.label === "WhatsApp" ? "_blank" : undefined}
+                  rel={c.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+                  className="flex min-w-[160px] items-center gap-3 rounded-xl border border-white/20 bg-white/10 px-5 py-3.5 transition-colors hover:bg-white/20"
                 >
-                  <span className="text-xl">{c.icon}</span>
+                  <span>{c.icon}</span>
                   <div>
-                    <p className="text-blue-200 text-[10px] uppercase tracking-wide font-medium">
-                      {c.label}
-                    </p>
-                    <p className="text-white text-sm font-semibold">
-                      {c.value}
-                    </p>
+                    <p className="text-[10px] font-medium uppercase tracking-wide text-blue-200">{c.label}</p>
+                    <p className="text-sm font-semibold text-white">{c.value}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </motion.div>
           </div>

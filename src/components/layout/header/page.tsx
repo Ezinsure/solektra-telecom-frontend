@@ -28,6 +28,12 @@ const products = [
     href: "/products/fiber-internet",
   },
   {
+    icon: <MdOutlineListAlt className="text-xl" />,
+    title: "Starlink Internet",
+    desc: "Connectivity beyond 4G and fiber Bring internet access to locations underserved by traditional networks.",
+    href: "/products/starlink-rwanda",
+  },
+  {
     icon: <MdOutlineAltRoute className="text-xl" />,
     title: "VoLTE",
     desc: "Crystal-clear voice calls delivered over our 4G network.",
@@ -43,7 +49,7 @@ const products = [
 
 const navLinks = [
   { label: "Home", hasDropdown: false, href: "/" },
-  { label: "Solution", hasDropdown: true, href: "/products" },
+  { label: "Services", hasDropdown: true, href: "/products" },
   { label: "Packages", hasDropdown: false, href: "/packages" },
   { label: "About us", hasDropdown: false, href: "/about" },
   { label: "Contact", hasDropdown: false, href: "/contact" },
@@ -112,7 +118,7 @@ const HeaderPage = () => {
 
                 {/* Mega dropdown */}
                 {link.hasDropdown && dropdownOpen && activeNav === link.label && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-[560px] bg-white rounded-2xl shadow-xl border border-gray-100 p-4 grid grid-cols-2 gap-2 z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-[700px] bg-white rounded-2xl shadow-xl border border-gray-100 p-4 grid grid-cols-2 gap-2 z-50">
                     {products.map((item) => (
                       <Link
                         key={item.title}
@@ -123,10 +129,10 @@ const HeaderPage = () => {
                           {item.icon}
                         </div>
                         <div>
-                          <p className="text-sm font-semibold text-[#0a0a0a] group-hover:text-[#0072CE] transition-colors duration-500">
+                          <p className="text-base font-semibold text-[#0a0a0a] group-hover:text-[#0072CE] transition-colors duration-500">
                             {item.title}
                           </p>
-                          <p className="text-xs text-[#0a0a0a]/50 mt-0.5 leading-relaxed">
+                          <p className="text-sm text-[#0a0a0a]/60 mt-0.5 leading-relaxed">
                             {item.desc}
                           </p>
                         </div>

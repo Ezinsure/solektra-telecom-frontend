@@ -4,13 +4,13 @@ import { useMemo, useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Homeimg1 from '../../../../public/assets/images/img5g.jpg'
-import Homeimg2 from '../../../../public/assets/images/Connected.png'
+import Homeimg2 from '../../../../public/assets/images/solektra-telecom-starlink-internet-rwanda.jpg'
 import Homeimg3 from '../../../../public/assets/images/smartfone.jpg'
 import Router from '../../../../public/assets/images/router1.png'
 import Routerdevice from '../../../../public/assets/images/routernew.png'
 import Smartphone1 from '../../../../public/assets/images/smartpnobg.png'
 import VoLTE from '../../../../public/assets/images/voicecall.png'
-import FiberInternet from '../../../../public/assets/images/fiber.jpg'
+import FiberInternet from '../../../../public/assets/images/fibersimage.avif'
 import HomeImage from '../../../../public/assets/images/curselhome/homeimg1.jpeg'
 import CarouselImg1 from '../../../../public/assets/images/curselhome/homeimg4.jpeg'
 import CarouselImg2 from '../../../../public/assets/images/curselhome/homeimg2.jpeg'
@@ -40,6 +40,14 @@ const heroSlides = [
         href: "/packages?cat=4g&sub=home",
     },
     {
+        image: Homeimg2,
+        eyebrow: "Fast connection",
+        title: "Starlink satellite internet",
+        titleAccent: "for your home , business , school",
+        desc: "with connection anywhere in Rwanda in eight hours or less.",
+        href: "/products/starlink-rwanda",
+    },
+    {
         image: Homeimg3,
         eyebrow: "Smartphones",
         title: "Smartphones on installment,",
@@ -47,14 +55,7 @@ const heroSlides = [
         desc: "Smartphones with flexible PAYGO plans and no big upfront cost.",
         href: "/products/digital-devices",
     },
-    {
-        image: Homeimg2,
-        eyebrow: "Business Fiber",
-        title: "Dedicated fiber",
-        titleAccent: "for your business",
-        desc: "Up to 1 Gbps with a 99.9% uptime SLA for offices, schools, hotels and institutions across Rwanda.",
-        href: "/products/fiber-internet",
-    },
+
 ];
 
 
@@ -315,8 +316,6 @@ const LandingPage = () => {
                     </motion.div>
                 </div>
             </section>
-
-            {/* ── Trust statement ── */}
             <motion.h2
                 variants={fadeUp}
                 initial="hidden"
@@ -328,7 +327,7 @@ const LandingPage = () => {
                 Your trusted <span className="text-[#e88824]">partner for internet {' '}</span> &amp; digital solutions
             </motion.h2>
 
-            {/*  Featured products */}
+            
             <div className="relative px-5 sm:px-8 py-8">
                 <Carousel
                     opts={{ loop: true, align: "start" }}
