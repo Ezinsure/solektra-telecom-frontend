@@ -3,7 +3,7 @@ import DigitalDevice from "./DigitalDevices";
 import JsonLd from "@/components/JsonLd";
 import { pageMetadata, breadcrumb, SITE, ORG_ID } from "@/lib/seo";
 
-const PATH = "/products/digital-devices";
+const PATH = "https://www.solektratelecom.com/products/digital-devices";
 
 export const metadata: Metadata = pageMetadata({
   title: "Buy Smartphones on Installment in Rwanda: Samsung, Tecno, Infinix",

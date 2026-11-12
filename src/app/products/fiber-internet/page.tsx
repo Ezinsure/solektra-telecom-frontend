@@ -3,7 +3,7 @@ import FiberInternetPage from "./FiberInternet";
 import JsonLd from "@/components/JsonLd";
 import { pageMetadata, breadcrumb, SITE, ORG_ID } from "@/lib/seo";
 
-const PATH = "/products/fiber-internet";
+const PATH = "https://www.solektratelecom.com/products/fiber-internet";
 
 export const metadata: Metadata = pageMetadata({
   title: "Dedicated Fiber Internet for Businesses in Kigali & Rwanda",

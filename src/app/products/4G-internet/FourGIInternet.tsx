@@ -18,22 +18,19 @@ import { BsWhatsapp } from "react-icons/bs";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const PHONE = "1150";
+const EMAIL = "info@solektra.co";
+const WHATSAPP = "250794766463";
+
+const whatsappUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Solektra, I'd like to know about 4G plans and availability.")}`;
+const quoteUrl = `mailto:${EMAIL}?subject=${encodeURIComponent("4G quotation request")}&body=${encodeURIComponent(
+    "Hello Solektra,\n\nI would like a quotation for 4G.\n\nLocation (district / sector):\nFor (home, business, school, farm, lodge):\nPhone number:\n\nThank you.",
+)}`;
+
 const contacts = [
-    {
-        label: "Call us",
-        value: "1150",
-        icon: <PhoneCall color="white" size={18} />,
-    },
-    {
-        label: "Email",
-        value: "info@solektra.co",
-        icon: <Mail color="white" size={16} />,
-    },
-    {
-        label: "WhatsApp",
-        value: "+250 794 766 463",
-        icon: <BsWhatsapp color="white" size={15} />,
-    },
+    { label: "Call us", value: PHONE, href: `tel:${PHONE}`, icon: <PhoneCall color="white" size={18} /> },
+    { label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, icon: <Mail color="white" size={16} /> },
+    { label: "WhatsApp", value: "+250 794 766 463", href: whatsappUrl, icon: <BsWhatsapp color="white" size={15} /> },
 ];
 
 const benefits = [
@@ -160,12 +157,12 @@ const benefits = [
 ];
 
 const useCases = [
-    { emoji: "🎬", label: "4K Streaming" },
-    { emoji: "🎮", label: "Online Gaming" },
-    { emoji: "💼", label: "Remote Work" },
-    { emoji: "📹", label: "Video Calls" },
-    { emoji: "☁️", label: "Cloud Storage" },
-    { emoji: "📱", label: "Social Media" },
+    { label: "4K Streaming" },
+    { label: "Online Gaming" },
+    { label: "Remote Work" },
+    { label: "Video Calls" },
+    { label: "Cloud Storage" },
+    { label: "Social Media" },
 ];
 
 // Reusable fade variant
@@ -206,7 +203,7 @@ const Internet4GPage = () => {
                             data-aos-delay="300"
                             className="w-full lg:w-1/2 shrink-0"
                         >
-                            <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(29,117,179,0.15)] ring-1 ring-[#1d75b3]/10">
+                            <div className="relative overflow-hidden shadow-[0_24px_80px_rgba(29,117,179,0.15)] ring-1 ring-[#1d75b3]/10">
                                 <Carousel
                                     opts={{ loop: true, align: "start" }}
                                     plugins={[autoplayPlugin]}
@@ -220,7 +217,7 @@ const Internet4GPage = () => {
                                                 <Image
                                                     src={image}
                                                     alt={`4G Internet slide ${index + 1}`}
-                                                    className="w-full h-[] object-cover"
+                                                    className="w-full h-[500px] object-cover"
                                                     priority={index === 0}
                                                 />
                                             </CarouselItem>
@@ -238,7 +235,6 @@ const Internet4GPage = () => {
                             className="w-full lg:w-1/2"
                         >
                             <span className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-5">
-                                <span className="w-5 h-px bg-[#0a0a0a]" />
                                 4G LTE Network
                             </span>
                             <h1
@@ -326,20 +322,19 @@ const Internet4GPage = () => {
                             animate="show"
                             transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} variants={fadeLeft} className="flex flex-col sm:flex-row gap-4">
                             {contacts.map((c) => (
-                                <div
+                                <a
                                     key={c.label}
-                                    className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-5 py-3.5 min-w-[160px]"
+                                    href={c.href}
+                                    target={c.label === "WhatsApp" ? "_blank" : undefined}
+                                    rel={c.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+                                    className="flex min-w-[160px] items-center gap-3 rounded-xl border border-white/20 bg-white/10 px-5 py-3.5 transition-colors hover:bg-white/20"
                                 >
                                     <span>{c.icon}</span>
                                     <div>
-                                        <p className="text-blue-200 text-[10px] uppercase tracking-wide font-medium">
-                                            {c.label}
-                                        </p>
-                                        <p className="text-white text-sm font-semibold">
-                                            {c.value}
-                                        </p>
+                                        <p className="text-[10px] font-medium uppercase tracking-wide text-blue-200">{c.label}</p>
+                                        <p className="text-sm font-semibold text-white">{c.value}</p>
                                     </div>
-                                </div>
+                                </a>
                             ))}
                         </motion.div>
                     </div>
@@ -404,7 +399,6 @@ const Internet4GPage = () => {
                                 key={u.label}
                                 className="flex items-center gap-2 text-sm text-[#4a5568] font-medium"
                             >
-                                <span>{u.emoji}</span>
                                 {u.label}
                             </div>
                         ))}

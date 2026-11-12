@@ -9,7 +9,7 @@ import Smartphone2 from "../../../public/assets/images/samrtphone2.png";
 import Routerr from "../../../public/assets/images/router.png";
 import Router1 from "../../../public/assets/images/router1.png";
 import Phone1 from "../../../public/assets/images/phone.png";
-import Fiber from "../../../public/assets/images/fiber.jpg";
+import Fiber from "../../../public/assets/images/fibersimage.avif";
 import PocketRouter from "../../../public/assets/images/pocketRoute.png";
 import VoLTE from "../../../public/assets/images/gaaming.jpeg";
 import {
@@ -151,7 +151,6 @@ const ProductsPage = () => {
                                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                                 className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest text-[#0072CE] font-semibold mb-4"
                             >
-                                <span className="w-4 h-px bg-[#0072CE]" />
                                 Products available
                             </motion.p>
                             <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#0a0a0a] leading-tight mb-5">

@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import Image from "next/image";
 import Volteimage from "../../../../public/assets/images/volte.png";
 import Voltescreen from "../../../../public/assets/images/screenvolte.png";
-import VolteVoice from "../../../../public/assets/images/voicecall.png";
+import VolteVoice from "../../../../public/assets/images/womanonphone.jpg";
 import {
     Carousel,
     CarouselContent,
@@ -140,22 +140,19 @@ const benefits = [
     },
 ];
 
+const PHONE = "1150";
+const EMAIL = "info@solektra.co";
+const WHATSAPP = "250794766463";
+
+const whatsappUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hello Solektra, I'd like to know about voice VoLTE plans and availability.")}`;
+const quoteUrl = `mailto:${EMAIL}?subject=${encodeURIComponent("VoLTE quotation request")}&body=${encodeURIComponent(
+    "Hello Solektra,\n\nI would like a quotation for VoLTE.\n\nLocation (district / sector):\nFor (home, business, school, farm, lodge):\nPhone number:\n\nThank you.",
+)}`;
+
 const contacts = [
-    {
-        label: "Call us",
-        value: "1150",
-        icon: <PhoneCall color="white" size={18} />,
-    },
-    {
-        label: "Email",
-        value: "info@solektra.co",
-        icon: <Mail color="white" size={16} />,
-    },
-    {
-        label: "WhatsApp",
-        value: "+250 794 766 463",
-        icon: <BsWhatsapp color="white" size={15} />,
-    },
+    { label: "Call us", value: PHONE, href: `tel:${PHONE}`, icon: <PhoneCall color="white" size={18} /> },
+    { label: "Email", value: EMAIL, href: `mailto:${EMAIL}`, icon: <Mail color="white" size={16} /> },
+    { label: "WhatsApp", value: "+250 794 766 463", href: whatsappUrl, icon: <BsWhatsapp color="white" size={15} /> },
 ];
 
 const fadeLeft = {
@@ -169,7 +166,7 @@ const fadeRight = {
 };
 
 const VoLTEPage = () => {
-    const images = [Volteimage, Voltescreen, VolteVoice];
+    const images = [VolteVoice, Volteimage, Voltescreen];
 
     const autoplayPlugin = useMemo(
         () =>
@@ -191,7 +188,7 @@ const VoLTEPage = () => {
                             <div
                                 data-aos="fade-right"
                                 data-aos-delay="300"
-                                className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-[0_0_60px_rgba(0,200,240,0.08)]"
+                                className="relative overflow-hidden ring-1 ring-white/10 shadow-[0_0_60px_rgba(0,200,240,0.08)]"
                             >
                                 <Carousel
                                     opts={{ loop: true, align: "start" }}
@@ -206,7 +203,7 @@ const VoLTEPage = () => {
                                                 <Image
                                                     src={image}
                                                     alt={`VoLTE slide ${index + 1}`}
-                                                    className="w-full h-auto object-cover"
+                                                    className="w-full h-[500px] object-cover"
                                                     priority={index === 0}
                                                 />
                                             </CarouselItem>
@@ -224,7 +221,6 @@ const VoLTEPage = () => {
                                 data-aos-delay="300"
                                 className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#0a0a0a]/75 mb-5"
                             >
-                                <span className="w-5 h-px bg-[#0a0a0a] " />
                                 Next-Gen Voice Technology
                             </span>
                             <h1
@@ -320,20 +316,19 @@ const VoLTEPage = () => {
                             animate="show"
                             transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }} className="flex flex-col sm:flex-row gap-4">
                             {contacts.map((c) => (
-                                <div
+                                <a
                                     key={c.label}
-                                    className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-5 py-3.5 min-w-[160px]"
+                                    href={c.href}
+                                    target={c.label === "WhatsApp" ? "_blank" : undefined}
+                                    rel={c.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+                                    className="flex min-w-[160px] items-center gap-3 rounded-xl border border-white/20 bg-white/10 px-5 py-3.5 transition-colors hover:bg-white/20"
                                 >
                                     <span>{c.icon}</span>
                                     <div>
-                                        <p className="text-blue-200 text-[10px] uppercase tracking-wide font-medium">
-                                            {c.label}
-                                        </p>
-                                        <p className="text-white text-sm font-semibold">
-                                            {c.value}
-                                        </p>
+                                        <p className="text-[10px] font-medium uppercase tracking-wide text-blue-200">{c.label}</p>
+                                        <p className="text-sm font-semibold text-white">{c.value}</p>
                                     </div>
-                                </div>
+                                </a>
                             ))}
                         </motion.div>
                     </div>
